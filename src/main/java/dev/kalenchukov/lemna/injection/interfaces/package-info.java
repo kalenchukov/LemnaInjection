@@ -1,0 +1,1 @@
+package dev.kalenchukov.lemna.injection.interfaces;
