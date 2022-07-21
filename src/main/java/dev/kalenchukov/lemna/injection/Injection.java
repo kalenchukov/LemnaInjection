@@ -54,13 +54,19 @@ public class Injection implements Injectable
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", locale);
+	private ResourceBundle localeLogs = ResourceBundle.getBundle(
+		"lemna/injection/localizations/logs",
+		locale
+	);
 
 	/**
 	 * Локализованные тексты исключений.
 	 */
 	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle("localizations/exceptions", locale);
+	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
+		"lemna/injection/localizations/exceptions",
+		locale
+	);
 
 	/**
 	 * Конструктор для {@code Injection}.
@@ -85,8 +91,15 @@ public class Injection implements Injectable
 		{
 			this.locale = locale;
 
-			localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
-			localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+			localeLogs = ResourceBundle.getBundle(
+				"lemna/injection/localizations/logs",
+				this.locale
+			);
+
+			localeExceptions = ResourceBundle.getBundle(
+				"lemna/injection/localizations/exceptions",
+				this.locale
+			);
 		}
 	}
 
