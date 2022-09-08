@@ -69,6 +69,9 @@ data.put("varTwo", new String[]{"13"});
 Вызов инжектора:
 
 ```java
+import dev.kalenchukov.lemna.injection.Injection;
+import dev.kalenchukov.lemna.injection.Injectable;
+
 Experimental experimental = new Experimental();
 
 Injectable injection = new Injection(experimental);
@@ -96,12 +99,14 @@ public enum Gender
 Для создания конвертера типа данных необходимо создать класс реализующий интерфейс "Converting".
 
 ```java
-import Converting;
+import dev.kalenchukov.lemna.injection.interfaces.Converting;
+import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 
 public final class GenderConverter implements Converting<Gender>
 {
+	@Nullable
 	@Override
-	public @Nullable Gender convert(@Nullable String @Nullable [] value) throws UnableConverterException
+	public Gender convert(@Nullable String @Nullable [] value) throws UnableConverterException
 	{
 		if (value == null || value[0] == null)
 		{
@@ -123,7 +128,7 @@ public final class GenderConverter implements Converting<Gender>
 Класс для поля которого необходим конвертер:
 
 ```java
-import Converter;
+import dev.kalenchukov.lemna.injection.annotations.Converter;
 
 public class Experimental
 {
@@ -147,6 +152,9 @@ data.put("gender", new String[]{"F"});
 Вызов инжектора:
 
 ```java
+import dev.kalenchukov.lemna.injection.Injection;
+import dev.kalenchukov.lemna.injection.Injectable;
+
 Experimental experimental = new Experimental();
 
 Injectable injection = new Injection(experimental);
