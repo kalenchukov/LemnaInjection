@@ -24,7 +24,7 @@
 
 	<groupId>dev.kalenchukov</groupId>
 	<artifactId>lemna-injection</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 
 	<name>Lemna Injection</name>
 	<description>Внедрение значений в поля классов</description>
