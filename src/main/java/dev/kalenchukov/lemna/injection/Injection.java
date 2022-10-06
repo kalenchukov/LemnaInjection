@@ -103,6 +103,8 @@ public class Injection implements Injectable
 			"lemna/injection/localizations/exceptions",
 			this.locale
 		);
+
+		this.findPersonalConverters();
 	}
 
 	/**
@@ -175,8 +177,6 @@ public class Injection implements Injectable
 
 		if (data.size() > 0)
 		{
-			this.findPersonalConverters();
-
 			for (Field field : this.object.getClass().getDeclaredFields())
 			{
 				final String[] value = data.get(
@@ -287,6 +287,8 @@ public class Injection implements Injectable
 	 */
 	private void findPersonalConverters()
 	{
+		LOG.debug(localeLogs.getString("60007"));
+
 		for (Field field : this.object.getClass().getDeclaredFields())
 		{
 			final Converter[] annotationsConverter = field.getAnnotationsByType(Converter.class);
@@ -309,5 +311,7 @@ public class Injection implements Injectable
 				));
 			}
 		}
+
+		LOG.debug(localeLogs.getString("60008"));
 	}
 }
