@@ -41,6 +41,13 @@ public interface Injectable
 	void setLocale(@NotNull Locale locale);
 
 	/**
+	 * Устанавливает нотацию названий полей класса в данных.
+	 *
+	 * @param notationType Тип нотации.
+	 */
+	void setNotationType(@NotNull NotationType notationType);
+
+	/**
 	 * Внедряет данные в поля класса.
 	 *
 	 * @param data Данные которые необходимо внедрить в поля класса.
@@ -54,21 +61,4 @@ public interface Injectable
 	 */
 	void inject(@NotNull Map<@NotNull String, @Nullable String @Nullable []> data)
         throws IllegalValueException, UnknownConverterException, InvalidConverterException;
-
-	/**
-	 * Внедряет данные в поля класса.
-	 *
-	 * @param data Данные которые необходимо внедрить в поля класса.
-	 * <ul>
-	 * 		<li><b>key</b> - поле класса в указанной нотации.</li>
-	 * 		<li><b>value</b> - массив значений.</li>
-	 * </ul>
-	 * @param notationType Нотация полей класса в данных.
-	 * @throws IllegalValueException Если передано некорректное значение для внедрения в данное поле класса.
-	 * @throws UnknownConverterException Если для типа поля не реализован персональный конвертер.
-	 * @throws InvalidConverterException Если конвертер некорректный.
-	 */
-	void inject(@NotNull Map<@NotNull String, @Nullable String @Nullable []> data,
-				@NotNull NotationType notationType)
-		throws IllegalValueException, UnknownConverterException, InvalidConverterException;
 }

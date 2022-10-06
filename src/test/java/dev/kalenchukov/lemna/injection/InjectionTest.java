@@ -130,7 +130,8 @@ public class InjectionTest
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data, NotationType.CAMEL_CASE);
+		injector.setNotationType(NotationType.CAMEL_CASE);
+		injector.inject(data);
 
 		assertEquals("text", experimental.paramValue);
 	}
@@ -152,7 +153,8 @@ public class InjectionTest
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data, NotationType.KEBAB_CASE);
+		injector.setNotationType(NotationType.KEBAB_CASE);
+		injector.inject(data);
 
 		assertEquals("text", experimental.paramValue);
 	}
@@ -174,7 +176,8 @@ public class InjectionTest
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data, NotationType.UPPER_CASE);
+		injector.setNotationType(NotationType.UPPER_CASE);
+		injector.inject(data);
 
 		assertEquals("text", experimental.paramValue);
 	}
@@ -196,7 +199,8 @@ public class InjectionTest
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data, NotationType.SNAKE_CASE);
+		injector.setNotationType(NotationType.SNAKE_CASE);
+		injector.inject(data);
 
 		assertEquals("text", experimental.paramValue);
 	}
@@ -218,7 +222,8 @@ public class InjectionTest
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data, NotationType.PASCAL_CASE);
+		injector.setNotationType(NotationType.PASCAL_CASE);
+		injector.inject(data);
 
 		assertEquals("text", experimental.paramValue);
 	}

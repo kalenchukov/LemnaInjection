@@ -47,6 +47,12 @@ public class Injection implements Injectable
 	private Locale locale = new Locale("ru", "RU");
 
 	/**
+	 * Тип нотации названий полей класса в данных.
+	 */
+	@NotNull
+	private NotationType notationType = NotationType.CAMEL_CASE;
+
+	/**
 	 * Объект класса в который необходимо внедрять данные.
 	 */
 	@NotNull
@@ -118,23 +124,21 @@ public class Injection implements Injectable
 	}
 
 	/**
+	 * @see Injectable#setNotationType(NotationType)
+	 */
+	@Override
+	public void setNotationType(@NotNull final NotationType notationType)
+	{
+		Objects.requireNonNull(notationType);
+
+		this.notationType = notationType;
+	}
+
+	/**
 	 * @see Injectable#inject(Map)
 	 */
 	@Override
 	public void inject(@NotNull final Map<@NotNull String, @Nullable String @Nullable []> data)
-		throws IllegalValueException, UnknownConverterException, InvalidConverterException
-	{
-		Objects.requireNonNull(data);
-
-		this.inject(data, NotationType.CAMEL_CASE);
-	}
-
-	/**
-	 * @see Injectable#inject(Map, NotationType)
-	 */
-	@Override
-	public void inject(@NotNull final Map<@NotNull String, @Nullable String @Nullable []> data,
-					   @NotNull final NotationType notationType)
 		throws IllegalValueException, UnknownConverterException, InvalidConverterException
 	{
 		Objects.requireNonNull(data);
@@ -151,7 +155,7 @@ public class Injection implements Injectable
 			for (Field field : this.object.getClass().getDeclaredFields())
 			{
 				final String[] value = data.get(
-					NotationConverter.to(field.getName(), notationType)
+					NotationConverter.to(field.getName(), this.notationType)
 				);
 
 				if (value == null)
