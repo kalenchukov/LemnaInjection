@@ -45,7 +45,7 @@ public final class ConverterRepository
 	 */
 	public ConverterRepository()
 	{
-		this.addConverters();
+		this.addConvertersSimple();
 		this.addConvertersArray();
 		this.addConvertersCollection();
 		this.addConvertersList();
@@ -82,9 +82,9 @@ public final class ConverterRepository
 	}
 
 	/**
-	 * Добавляет конвертеры типов данных.
+	 * Добавляет конвертеры простых типов данных.
 	 */
-	private void addConverters()
+	private void addConvertersSimple()
 	{
 		this.addConverter(Short.class.getTypeName(), ShortConverter.class);
 		this.addConverter(Integer.class.getTypeName(), IntegerConverter.class);
