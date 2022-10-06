@@ -65,6 +65,18 @@ public final class ConverterRepository
 	}
 
 	/**
+	 * Добавляет коллекцию конвертеров типов данных.
+	 *
+	 * @param converters Коллекция конвертеров типов данных.
+	 */
+	public void addConverters(@NotNull Map<@NotNull String, @NotNull Class<? extends Converting<?>>> converters)
+	{
+		Objects.requireNonNull(converters);
+
+		converters.forEach(this::addConverter);
+	}
+
+	/**
 	 * Добавляет конвертер типа данных.
 	 *
 	 * @param forType Тип данных для которого используется конвертер.
@@ -76,9 +88,7 @@ public final class ConverterRepository
 		Objects.requireNonNull(forType);
 		Objects.requireNonNull(converter);
 
-		if (!this.converters.containsKey(forType)) {
-			this.converters.put(forType, converter);
-		}
+		this.converters.putIfAbsent(forType, converter);
 	}
 
 	/**

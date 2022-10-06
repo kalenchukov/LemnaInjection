@@ -104,7 +104,9 @@ public class Injection implements Injectable
 			this.locale
 		);
 
-		this.findPersonalConverters();
+		this.converterRepository.addConverters(
+			this.findPersonalConverters()
+		);
 	}
 
 	/**
@@ -285,21 +287,20 @@ public class Injection implements Injectable
 	/**
 	 * Ищет персональные конвертеры для типов данных.
 	 */
-	private void findPersonalConverters()
+	@NotNull
+	private Map<@NotNull String, @NotNull Class<? extends Converting<?>>> findPersonalConverters()
 	{
 		LOG.debug(localeLogs.getString("60007"));
 
+		Map<String, Class<? extends Converting<?>>> personalConverters = new HashMap<>();
+
 		for (Field field : this.object.getClass().getDeclaredFields())
 		{
-			final Converter[] annotationsConverter = field.getAnnotationsByType(Converter.class);
+			final Converter[] annotationsConverters = field.getAnnotationsByType(Converter.class);
 
-			if (annotationsConverter.length == 0) {
-				return;
-			}
-
-			for (Converter annotationConverter : annotationsConverter)
+			for (Converter annotationConverter : annotationsConverters)
 			{
-				this.converterRepository.addConverter(
+				personalConverters.putIfAbsent(
 					field.getGenericType().getTypeName(),
 					annotationConverter.converter()
 				);
@@ -313,5 +314,7 @@ public class Injection implements Injectable
 		}
 
 		LOG.debug(localeLogs.getString("60008"));
+
+		return personalConverters;
 	}
 }
