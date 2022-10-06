@@ -38,13 +38,15 @@ public final class ConverterRepository
 	 * Коллекция конвертеров типа данных.
 	 */
 	@NotNull
-	private final Map<@NotNull String, @NotNull Class<? extends Converting<?>>> converters = new HashMap<>();
+	private final Map<@NotNull String, @NotNull Class<? extends Converting<?>>> converters;
 
 	/**
 	 * Конструктор для {@code ConverterRepository}.
 	 */
 	public ConverterRepository()
 	{
+		this.converters  = new HashMap<>();
+
 		this.addConvertersSimple();
 		this.addConvertersArray();
 		this.addConvertersCollection();
