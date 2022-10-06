@@ -41,6 +41,14 @@ public interface Injectable
 	void setLocale(@NotNull Locale locale);
 
 	/**
+	 * Возвращает локализацию.
+	 *
+	 * @return Локализация.
+	 */
+	@NotNull
+	Locale getLocale();
+
+	/**
 	 * Устанавливает тип нотации названий полей класса в данных.
 	 *
 	 * @param notationType Тип нотации.

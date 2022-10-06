@@ -124,6 +124,16 @@ public class Injection implements Injectable
 	}
 
 	/**
+	 * @see Injectable#getLocale()
+	 */
+	@NotNull
+	@Override
+	public Locale getLocale()
+	{
+		return this.locale;
+	}
+
+	/**
 	 * @see Injectable#setNotationType(NotationType)
 	 */
 	@Override
