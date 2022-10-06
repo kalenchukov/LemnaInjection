@@ -21,6 +21,7 @@ package dev.kalenchukov.lemna.injection;
 import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
+import dev.kalenchukov.notation.converting.resources.NotationType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -44,7 +45,7 @@ public interface Injectable
 	 *
 	 * @param data Данные которые необходимо внедрить в поля класса.
 	 * <ul>
-	 * 		<li><b>key</b> - поле класса.</li>
+	 * 		<li><b>key</b> - поле класса в нотации Camel Case.</li>
 	 * 		<li><b>value</b> - массив значений.</li>
 	 * </ul>
 	 * @throws IllegalValueException Если передано некорректное значение для внедрения в данное поле класса.
@@ -53,4 +54,21 @@ public interface Injectable
 	 */
 	void inject(@NotNull Map<@NotNull String, @Nullable String @Nullable []> data)
         throws IllegalValueException, UnknownConverterException, InvalidConverterException;
+
+	/**
+	 * Внедряет данные в поля класса.
+	 *
+	 * @param data Данные которые необходимо внедрить в поля класса.
+	 * <ul>
+	 * 		<li><b>key</b> - поле класса в указанной нотации.</li>
+	 * 		<li><b>value</b> - массив значений.</li>
+	 * </ul>
+	 * @param notationType Нотация полей класса в данных.
+	 * @throws IllegalValueException Если передано некорректное значение для внедрения в данное поле класса.
+	 * @throws UnknownConverterException Если для типа поля не реализован персональный конвертер.
+	 * @throws InvalidConverterException Если конвертер некорректный.
+	 */
+	void inject(@NotNull Map<@NotNull String, @Nullable String @Nullable []> data,
+				@NotNull NotationType notationType)
+		throws IllegalValueException, UnknownConverterException, InvalidConverterException;
 }

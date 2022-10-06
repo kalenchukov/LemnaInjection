@@ -24,6 +24,8 @@ import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
 import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
 import dev.kalenchukov.lemna.injection.interfaces.Converting;
+import dev.kalenchukov.notation.converting.NotationConverter;
+import dev.kalenchukov.notation.converting.resources.NotationType;
 import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -124,6 +126,19 @@ public class Injection implements Injectable
 	{
 		Objects.requireNonNull(data);
 
+		this.inject(data, NotationType.CAMEL_CASE);
+	}
+
+	/**
+	 * @see Injectable#inject(Map, NotationType)
+	 */
+	@Override
+	public void inject(@NotNull final Map<@NotNull String, @Nullable String @Nullable []> data,
+					   @NotNull final NotationType notationType)
+		throws IllegalValueException, UnknownConverterException, InvalidConverterException
+	{
+		Objects.requireNonNull(data);
+
 		LOG.debug(String.format(
 			localeLogs.getString("60001"),
 			this.object.getClass().getName()
@@ -135,13 +150,15 @@ public class Injection implements Injectable
 
 			for (Field field : this.object.getClass().getDeclaredFields())
 			{
-				String[] value = data.get(field.getName());
+				final String[] value = data.get(
+					NotationConverter.to(field.getName(), notationType)
+				);
 
 				if (value == null)
 				{
 					LOG.debug(String.format(
-							localeLogs.getString("60003"),
-							field.getName()
+						localeLogs.getString("60003"),
+						field.getName()
 					));
 
 					continue;
@@ -153,6 +170,13 @@ public class Injection implements Injectable
 
 				field.setAccessible(false);
 			}
+		}
+		else
+		{
+			LOG.debug(String.format(
+				localeLogs.getString("60006"),
+				this.object.getClass().getName()
+			));
 		}
 
 		LOG.debug(String.format(
@@ -177,7 +201,7 @@ public class Injection implements Injectable
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(value);
 
-		boolean has = this.converterRepository.getConverters().containsKey(
+		final boolean has = this.converterRepository.getConverters().containsKey(
 			field.getGenericType().getTypeName()
 		);
 
@@ -196,9 +220,6 @@ public class Injection implements Injectable
 		try
 		{
 			Method method = converter.getDeclaredMethod("convert", String[].class);
-
-//			System.out.println(String[].class.getTypeName());
-//			System.out.println(value.getClass().getTypeName());
 
 			field.set(
 				this.object,
@@ -239,7 +260,7 @@ public class Injection implements Injectable
 	{
 		for (Field field : this.object.getClass().getDeclaredFields())
 		{
-			Converter[] annotationsConverter = field.getAnnotationsByType(Converter.class);
+			final Converter[] annotationsConverter = field.getAnnotationsByType(Converter.class);
 
 			if (annotationsConverter.length == 0) {
 				return;
