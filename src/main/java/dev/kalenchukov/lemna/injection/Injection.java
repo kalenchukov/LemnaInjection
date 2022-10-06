@@ -19,7 +19,7 @@
 package dev.kalenchukov.lemna.injection;
 
 import dev.kalenchukov.lemna.injection.annotations.Converter;
-import dev.kalenchukov.lemna.injection.converters.ConverterRepository;
+import dev.kalenchukov.lemna.injection.repositories.ConverterRepository;
 import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
 import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;

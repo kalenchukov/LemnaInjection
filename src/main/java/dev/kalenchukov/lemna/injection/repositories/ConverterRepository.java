@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package dev.kalenchukov.lemna.injection.converters;
+package dev.kalenchukov.lemna.injection.repositories;
 
 import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.converters.arrays.*;
