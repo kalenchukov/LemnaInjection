@@ -135,6 +135,16 @@ public class Injection implements Injectable
 	}
 
 	/**
+	 * @see Injectable#getNotationType()
+	 */
+	@NotNull
+	@Override
+	public NotationType getNotationType()
+	{
+		return this.notationType;
+	}
+
+	/**
 	 * @see Injectable#inject(Map)
 	 */
 	@Override

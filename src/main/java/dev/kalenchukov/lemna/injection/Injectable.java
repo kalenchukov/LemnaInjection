@@ -41,11 +41,17 @@ public interface Injectable
 	void setLocale(@NotNull Locale locale);
 
 	/**
-	 * Устанавливает нотацию названий полей класса в данных.
+	 * Устанавливает тип нотации названий полей класса в данных.
 	 *
 	 * @param notationType Тип нотации.
 	 */
 	void setNotationType(@NotNull NotationType notationType);
+
+	/**
+	 * Возвращает тип нотации названий полей класса в данных.
+	 */
+	@NotNull
+	NotationType getNotationType();
 
 	/**
 	 * Внедряет данные в поля класса.
