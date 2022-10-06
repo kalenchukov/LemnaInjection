@@ -44,13 +44,13 @@ public class Injection implements Injectable
 	 * Локализация.
 	 */
 	@NotNull
-	private Locale locale = new Locale("ru", "RU");
+	private Locale locale;
 
 	/**
 	 * Тип нотации названий полей класса в данных.
 	 */
 	@NotNull
-	private NotationType notationType = NotationType.CAMEL_CASE;
+	private NotationType notationType;
 
 	/**
 	 * Объект класса в который необходимо внедрять данные.
@@ -62,31 +62,25 @@ public class Injection implements Injectable
 	 * Репозиторий конвертеров типов данных.
 	 */
 	@NotNull
-	private final ConverterRepository converterRepository = new ConverterRepository();
+	private final ConverterRepository converterRepository;
+
+	/**
+	 * Локализованные тексты логирования.
+	 */
+	@NotNull
+	private ResourceBundle localeLogs;
+
+	/**
+	 * Локализованные тексты исключений.
+	 */
+	@NotNull
+	private ResourceBundle localeExceptions;
 
 	/**
 	 * Логгер для данного класса.
 	 */
 	@NotNull
 	private static final Logger LOG = Logger.getLogger(Injection.class);
-
-	/**
-	 * Локализованные тексты логирования.
-	 */
-	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle(
-		"lemna/injection/localizations/logs",
-		locale
-	);
-
-	/**
-	 * Локализованные тексты исключений.
-	 */
-	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
-		"lemna/injection/localizations/exceptions",
-		locale
-	);
 
 	/**
 	 * Конструктор для {@code Injection}.
@@ -98,6 +92,17 @@ public class Injection implements Injectable
 		Objects.requireNonNull(object);
 
 		this.object = object;
+		this.locale = new Locale("ru", "RU");
+		this.notationType = NotationType.CAMEL_CASE;
+		this.converterRepository = new ConverterRepository();
+		this.localeLogs = ResourceBundle.getBundle(
+			"lemna/injection/localizations/logs",
+			this.locale
+		);
+		this.localeExceptions = ResourceBundle.getBundle(
+			"lemna/injection/localizations/exceptions",
+			this.locale
+		);
 	}
 
 	/**
@@ -248,8 +253,8 @@ public class Injection implements Injectable
 			field.set(
 				this.object,
 				method.invoke(
-						converter.getConstructor().newInstance(),
-						(Object) value
+					converter.getConstructor().newInstance(),
+					(Object) value
 				)
 			);
 		}
