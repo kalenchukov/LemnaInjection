@@ -232,21 +232,17 @@ public class Injection implements Injectable
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(value);
 
-		final boolean has = this.converterRepository.getConverters().containsKey(
+		Class<? extends Converting<?>> converter = this.converterRepository.getConverter(
 			field.getGenericType().getTypeName()
 		);
 
-		if (!has) {
+		if (converter == null) {
 			throw new UnknownConverterException(String.format(
 				localeExceptions.getString("70002"),
 				field.getGenericType().getTypeName(),
 				this.object.getClass().getName()
 			));
 		}
-
-		Class<? extends Converting<?>> converter = this.converterRepository.getConverters().get(
-			field.getGenericType().getTypeName()
-		);
 
 		try
 		{

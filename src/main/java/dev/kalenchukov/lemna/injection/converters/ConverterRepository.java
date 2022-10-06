@@ -25,6 +25,7 @@ import dev.kalenchukov.lemna.injection.converters.lists.*;
 import dev.kalenchukov.lemna.injection.converters.sets.*;
 import dev.kalenchukov.lemna.injection.converters.singles.*;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
 
 import java.util.*;
@@ -64,6 +65,17 @@ public final class ConverterRepository
 	public Map<@NotNull String, @NotNull Class<? extends Converting<?>>> getConverters()
 	{
 		return Collections.unmodifiableMap(this.converters);
+	}
+
+	/**
+	 * Возвращает конвертер типа данных.
+	 *
+	 * @return Конвертер типа данных.
+	 */
+	@Nullable
+	public Class<? extends Converting<?>> getConverter(@NotNull final String forType)
+	{
+		return this.converters.get(forType);
 	}
 
 	/**
