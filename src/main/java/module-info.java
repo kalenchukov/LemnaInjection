@@ -1,3 +1,6 @@
+/**
+ * Определяет API для внедрения значений в поля классов.
+ */
 module dev.kalenchukov.lemna.injection
 {
 	requires org.jetbrains.annotations;
