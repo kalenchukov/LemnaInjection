@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет классы, необходимые для конвертирования значений полей классов в {@code Collection}.
+ */
 package dev.kalenchukov.lemna.injection.converters.collections;

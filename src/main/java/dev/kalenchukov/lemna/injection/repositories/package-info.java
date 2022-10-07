@@ -17,6 +17,6 @@
  */
 
 /**
- * Предоставляет аннотации, необходимые для задания внедрения значений полей классов.
+ * Предоставляет классы, необходимые для получения данных из хранилищ.
  */
-package dev.kalenchukov.lemna.injection.annotations;
+package dev.kalenchukov.lemna.injection.repositories;
