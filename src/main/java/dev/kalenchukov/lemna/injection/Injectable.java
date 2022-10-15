@@ -57,6 +57,8 @@ public interface Injectable
 
 	/**
 	 * Возвращает тип нотации названий полей класса в данных.
+	 *
+	 * @return Тип нотации.
 	 */
 	@NotNull
 	NotationType getNotationType();
