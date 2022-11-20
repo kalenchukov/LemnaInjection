@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class CollectionShortConverter implements Converting<Collection<Short>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Short> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Short> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Short[] convertValue = new ArrayOfShortConverter().convert(value);

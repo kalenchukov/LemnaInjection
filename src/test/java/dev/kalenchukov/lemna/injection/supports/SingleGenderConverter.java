@@ -22,20 +22,22 @@ import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class SingleGenderConverter implements Converting<Gender>
 {
     @Nullable
     @Override
-    public Gender convert(@Nullable String @Nullable [] value)
+    public Gender convert(@Nullable List<@Nullable String> value)
 		throws UnableConverterException
     {
-        if (value == null || value[0] == null) {
+        if (value == null || value.get(0) == null) {
             return null;
         }
 
         try
         {
-            return Gender.valueOf(value[0]);
+            return Gender.valueOf(value.get(0));
         }
         catch (IllegalArgumentException exception)
         {

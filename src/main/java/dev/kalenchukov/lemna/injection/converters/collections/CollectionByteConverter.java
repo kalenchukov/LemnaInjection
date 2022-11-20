@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class CollectionByteConverter implements Converting<Collection<Byte>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Byte> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Byte> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Byte[] convertValue = new ArrayOfByteConverter().convert(value);

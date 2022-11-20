@@ -39,8 +39,8 @@ public class InjectionTest
 			public int variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"1"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("1"));
 
 		Experimental experimental = new Experimental();
 
@@ -61,8 +61,8 @@ public class InjectionTest
 			public List<String[]> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"QWE"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("QWE"));
 
 		Experimental experimental = new Experimental();
 
@@ -81,7 +81,7 @@ public class InjectionTest
 			public String variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
+		Map<String, List<String>> data = new HashMap<>();
 		data.put("variable", null);
 
 		Experimental experimental = new Experimental();
@@ -103,7 +103,7 @@ public class InjectionTest
 			public String variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
+		Map<String, List<String>> data = new HashMap<>();
 
 		Experimental experimental = new Experimental();
 
@@ -124,8 +124,8 @@ public class InjectionTest
 			public String paramValue;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("paramValue", new String[] {"text"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("paramValue", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -147,8 +147,8 @@ public class InjectionTest
 			public String paramValue;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("param-value", new String[] {"text"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("param-value", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -170,8 +170,8 @@ public class InjectionTest
 			public String paramValue;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("PARAM_VALUE", new String[] {"text"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("PARAM_VALUE", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -193,8 +193,8 @@ public class InjectionTest
 			public String paramValue;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("param_value", new String[] {"text"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("param_value", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -216,8 +216,8 @@ public class InjectionTest
 			public String paramValue;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("ParamValue", new String[] {"text"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("ParamValue", List.of("text"));
 
 		Experimental experimental = new Experimental();
 

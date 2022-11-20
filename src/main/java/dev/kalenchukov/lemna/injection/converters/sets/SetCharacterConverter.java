@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.Objects;
 
@@ -34,11 +35,11 @@ import java.util.Objects;
 public final class SetCharacterConverter implements Converting<Set<Character>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Set<@NotNull Character> convert(@Nullable final String @Nullable [] value)
+	public Set<@NotNull Character> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Character[] convertValue = new ArrayOfCharacterConverter().convert(value);

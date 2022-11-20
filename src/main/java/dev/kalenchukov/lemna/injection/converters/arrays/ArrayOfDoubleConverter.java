@@ -23,28 +23,31 @@ import dev.kalenchukov.lemna.injection.converters.singles.DoubleConverter;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Double[]}.
  */
 public final class ArrayOfDoubleConverter implements Converting<Double[]>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Double @Nullable [] convert(@Nullable final String @Nullable [] value)
+	public Double @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		if (value == null) {
 			return null;
 		}
 
-		Double[] convertValue = new Double[value.length];
+		Double[] convertValue = new Double[value.size()];
 
-		for (int elm = 0; elm < value.length; elm++)
+		for (int elm = 0; elm < value.size(); elm++)
 		{
-			convertValue[elm] = new DoubleConverter().convert(new String[]{value[elm]});
+			convertValue[elm] = new DoubleConverter().convert(Collections.singletonList(value.get(elm)));
 		}
 
 		return convertValue;

@@ -22,22 +22,25 @@ import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.List;
+
 public class ArrayOfGenderConverter implements Converting<Gender[]>
 {
     @Nullable
     @Override
-    public Gender @Nullable [] convert(@Nullable String @Nullable [] value)
+    public Gender @Nullable [] convert(@Nullable List<@Nullable String> value)
 		throws UnableConverterException
     {
         if (value == null) {
             return null;
         }
 
-        Gender[] convertValue = new Gender[value.length];
+        Gender[] convertValue = new Gender[value.size()];
 
-        for (int elm = 0; elm < value.length; elm++)
+        for (int elm = 0; elm < value.size(); elm++)
         {
-            convertValue[elm] = new SingleGenderConverter().convert(new String[]{value[elm]});
+            convertValue[elm] = new SingleGenderConverter().convert(Collections.singletonList(value.get(elm)));
         }
 
         return convertValue;

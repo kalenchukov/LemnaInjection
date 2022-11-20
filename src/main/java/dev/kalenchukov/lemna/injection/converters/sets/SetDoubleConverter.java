@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.Objects;
 
@@ -34,11 +35,11 @@ import java.util.Objects;
 public final class SetDoubleConverter implements Converting<Set<Double>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Set<@NotNull Double> convert(@Nullable final String @Nullable [] value)
+	public Set<@NotNull Double> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Double[] convertValue = new ArrayOfDoubleConverter().convert(value);

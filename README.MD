@@ -61,9 +61,9 @@ public class Experimental
 Данные которые необходимо внедрить в поля.
 
 ```java
-Map<String, String[]> data = new HashMap<>();
-data.put("varOne", new String[]{"Значение первого поля"});
-data.put("varTwo", new String[]{"13"});
+Map<String, List<String>> data = new HashMap<>();
+data.put("varOne", List.of("Значение первого поля"));
+data.put("varTwo", List.of("13"));
 ```
 
 Вызов инжектора:
@@ -106,19 +106,19 @@ public final class GenderConverter implements Converting<Gender>
 {
 	@Nullable
 	@Override
-	public Gender convert(@Nullable String @Nullable [] value) throws UnableConverterException
+	public Gender convert(@Nullable List<@Nullable String> value) throws UnableConverterException
 	{
-		if (value == null || value[0] == null)
+		if (value == null || value.get(0) == null)
 		{
 			return null;
 		}
 
 		try
-		{
-			return Gender.valueOf(value[0]);
+        {
+			return Gender.valueOf(value.get(0));
 		}
 		catch (IllegalArgumentException exception)
-		{
+        {
 			throw new UnableConverterException();
 		}
 	}
@@ -145,8 +145,8 @@ public class Experimental
 Данные для внедрения:
 
 ```java
-Map<String, String[]> data = new HashMap<>();
-data.put("gender", new String[]{"F"});
+Map<String, List<String>> data = new HashMap<>();
+data.put("gender", List.of("F"));
 ```
 
 Вызов инжектора:

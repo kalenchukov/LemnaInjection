@@ -22,26 +22,28 @@ import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Double}.
  */
 public final class DoubleConverter implements Converting<Double>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Double convert(@Nullable final String @Nullable [] value)
+	public Double convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
-		if (value == null || value[0] == null) {
+		if (value == null || value.get(0) == null) {
 			return null;
 		}
 
 		try
 		{
-			return Double.parseDouble(value[0]);
+			return Double.parseDouble(value.get(0));
 		}
 		catch (NumberFormatException exception)
 		{

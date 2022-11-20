@@ -21,6 +21,8 @@ package dev.kalenchukov.lemna.injection.interfaces;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Интерфейс для реализации собственного класса конвертера типа значений.
  *
@@ -36,6 +38,6 @@ public interface Converting<T>
 	 * @throws UnableConverterException Если конвертировать значение в нужный тип данных не удалось.
 	 */
 	@Nullable
-	T convert(@Nullable String @Nullable [] value)
+	T convert(@Nullable List<@Nullable String> value)
 		throws UnableConverterException;
 }

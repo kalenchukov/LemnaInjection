@@ -23,28 +23,31 @@ import dev.kalenchukov.lemna.injection.converters.singles.ByteConverter;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Byte[]}.
  */
 public final class ArrayOfByteConverter implements Converting<Byte[]>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Byte @Nullable [] convert(@Nullable final String @Nullable [] value)
+	public Byte @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		if (value == null) {
 			return null;
 		}
 
-		Byte[] convertValue = new Byte[value.length];
+		Byte[] convertValue = new Byte[value.size()];
 
-		for (int elm = 0; elm < value.length; elm++)
+		for (int elm = 0; elm < value.size(); elm++)
 		{
-			convertValue[elm] = new ByteConverter().convert(new String[]{value[elm]});
+			convertValue[elm] = new ByteConverter().convert(Collections.singletonList(value.get(elm)));
 		}
 
 		return convertValue;

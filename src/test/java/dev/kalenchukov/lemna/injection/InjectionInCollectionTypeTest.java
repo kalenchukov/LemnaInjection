@@ -38,8 +38,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Integer> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"1", "11"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("1", "11"));
 
 		Experimental experimental = new Experimental();
 
@@ -60,8 +60,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Short> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"2", "22"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("2", "22"));
 
 		Experimental experimental = new Experimental();
 
@@ -82,8 +82,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Float> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"3.0", "3.30"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("3.0", "3.30"));
 
 		Experimental experimental = new Experimental();
 
@@ -104,8 +104,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Double> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"4.59", "59.40"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("4.59", "59.40"));
 
 		Experimental experimental = new Experimental();
 
@@ -126,8 +126,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Long> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"1698756", "345345346"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("1698756", "345345346"));
 
 		Experimental experimental = new Experimental();
 
@@ -148,8 +148,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<String> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"text", "TEXT"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("text", "TEXT"));
 
 		Experimental experimental = new Experimental();
 
@@ -170,8 +170,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Character> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"A", "B"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("A", "B"));
 
 		Experimental experimental = new Experimental();
 
@@ -192,8 +192,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Boolean> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"true", "false"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("true", "false"));
 
 		Experimental experimental = new Experimental();
 
@@ -214,8 +214,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Byte> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"27", "45"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("27", "45"));
 
 		Experimental experimental = new Experimental();
 
@@ -236,8 +236,11 @@ public class InjectionInCollectionTypeTest
 			public Collection<Integer> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{null});
+		List<String> values = new ArrayList<>();
+		values.add(null);
+
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
@@ -256,8 +259,8 @@ public class InjectionInCollectionTypeTest
 			public Collection<Integer> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"10", "10"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("10", "10"));
 
 		Experimental experimental = new Experimental();
 

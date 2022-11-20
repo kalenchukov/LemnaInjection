@@ -42,8 +42,8 @@ public class InjectionInSelfTypeTest
 			public Gender variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"M"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("M"));
 
 		Experimental experimental = new Experimental();
 
@@ -65,8 +65,11 @@ public class InjectionInSelfTypeTest
 			public Gender variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{null});
+		List<String> values = new ArrayList<>();
+		values.add(null);
+
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
@@ -88,8 +91,8 @@ public class InjectionInSelfTypeTest
 			public Gender[] variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"M", "F"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
@@ -109,8 +112,8 @@ public class InjectionInSelfTypeTest
 			public Gender[] variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"M", "F"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
@@ -132,8 +135,11 @@ public class InjectionInSelfTypeTest
 			public Gender[] variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{null});
+		List<String> values = new ArrayList<>();
+		values.add(null);
+
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
@@ -155,8 +161,8 @@ public class InjectionInSelfTypeTest
 			public Collection<Gender> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"M", "F"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
@@ -178,8 +184,8 @@ public class InjectionInSelfTypeTest
 			public List<Gender> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"M", "F"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
@@ -201,8 +207,11 @@ public class InjectionInSelfTypeTest
 			public List<Gender> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{null});
+		List<String> values = new ArrayList<>();
+		values.add(null);
+
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
@@ -222,8 +231,8 @@ public class InjectionInSelfTypeTest
 			public Set<Gender> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"M", "F"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
@@ -245,8 +254,8 @@ public class InjectionInSelfTypeTest
 			public Set<Gender> variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"F", "F"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("F", "F"));
 
 		Experimental experimental = new Experimental();
 

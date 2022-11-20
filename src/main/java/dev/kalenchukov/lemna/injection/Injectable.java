@@ -25,6 +25,7 @@ import dev.kalenchukov.notation.converting.resources.NotationType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -75,6 +76,6 @@ public interface Injectable
 	 * @throws UnknownConverterException Если для типа поля не реализован персональный конвертер.
 	 * @throws InvalidConverterException Если конвертер некорректный.
 	 */
-	void inject(@NotNull Map<@NotNull String, @Nullable String @Nullable []> data)
+	void inject(@NotNull Map<@NotNull String, @Nullable List<@Nullable String>> data)
         throws IllegalValueException, UnknownConverterException, InvalidConverterException;
 }

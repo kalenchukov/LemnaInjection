@@ -167,7 +167,7 @@ public class Injection implements Injectable
 	 * @see Injectable#inject(Map)
 	 */
 	@Override
-	public void inject(@NotNull final Map<@NotNull String, @Nullable String @Nullable []> data)
+	public void inject(@NotNull final Map<@NotNull String, @Nullable List<@Nullable String>> data)
 		throws IllegalValueException, UnknownConverterException, InvalidConverterException
 	{
 		Objects.requireNonNull(data);
@@ -181,7 +181,7 @@ public class Injection implements Injectable
 		{
 			for (Field field : this.object.getClass().getDeclaredFields())
 			{
-				final String[] value = data.get(
+				final List<String> value = data.get(
 					NotationConverter.to(field.getName(), this.notationType)
 				);
 
@@ -226,7 +226,7 @@ public class Injection implements Injectable
 	 * @throws UnknownConverterException Если для типа поля не реализован персональный конвертер.
 	 * @throws InvalidConverterException Если конвертер некорректный.
 	 */
-	private void injectValueField(@NotNull final Field field, @Nullable final String @Nullable [] value)
+	private void injectValueField(@NotNull final Field field, @Nullable final List<@Nullable String> value)
 		throws IllegalValueException, UnknownConverterException, InvalidConverterException
 	{
 		Objects.requireNonNull(field);
@@ -246,7 +246,7 @@ public class Injection implements Injectable
 
 		try
 		{
-			Method method = converter.getDeclaredMethod("convert", String[].class);
+			Method method = converter.getDeclaredMethod("convert", List.class);
 
 			field.set(
 				this.object,

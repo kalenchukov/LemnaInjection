@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class CollectionFloatConverter implements Converting<Collection<Float>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Float> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Float> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Float[] convertValue = new ArrayOfFloatConverter().convert(value);

@@ -23,28 +23,31 @@ import dev.kalenchukov.lemna.injection.converters.singles.ShortConverter;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Short[]}.
  */
 public final class ArrayOfShortConverter implements Converting<Short[]>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Short @Nullable [] convert(@Nullable final String @Nullable [] value)
+	public Short @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		if (value == null) {
 			return null;
 		}
 
-		Short[] convertValue = new Short[value.length];
+		Short[] convertValue = new Short[value.size()];
 
-		for (int elm = 0; elm < value.length; elm++)
+		for (int elm = 0; elm < value.size(); elm++)
 		{
-			convertValue[elm] = new ShortConverter().convert(new String[]{value[elm]});
+			convertValue[elm] = new ShortConverter().convert(Collections.singletonList(value.get(elm)));
 		}
 
 		return convertValue;

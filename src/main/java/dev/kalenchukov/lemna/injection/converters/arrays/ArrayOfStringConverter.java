@@ -23,28 +23,31 @@ import dev.kalenchukov.lemna.injection.converters.singles.StringConverter;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code String[]}.
  */
 public final class ArrayOfStringConverter implements Converting<String[]>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public String @Nullable [] convert(@Nullable final String @Nullable [] value)
+	public String @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		if (value == null) {
 			return null;
 		}
 
-		String[] convertValue = new String[value.length];
+		String[] convertValue = new String[value.size()];
 
-		for (int elm = 0; elm < value.length; elm++)
+		for (int elm = 0; elm < value.size(); elm++)
 		{
-			convertValue[elm] = new StringConverter().convert(new String[]{value[elm]});
+			convertValue[elm] = new StringConverter().convert(Collections.singletonList(value.get(elm)));
 		}
 
 		return convertValue;

@@ -35,11 +35,11 @@ import java.util.Objects;
 public final class CollectionIntegerConverter implements Converting<Collection<Integer>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Integer> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Integer> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Integer[] convertValue = new ArrayOfIntegerConverter().convert(value);

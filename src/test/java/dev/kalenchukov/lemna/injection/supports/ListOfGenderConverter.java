@@ -31,7 +31,7 @@ public class ListOfGenderConverter implements Converting<List<Gender>>
 {
     @Nullable
     @Override
-    public List<@NotNull Gender> convert(@Nullable String @Nullable [] value)
+    public List<@NotNull Gender> convert(@Nullable List<@Nullable String> value)
 		throws UnableConverterException
     {
         Gender[] convertValue = new ArrayOfGenderConverter().convert(value);

@@ -22,26 +22,28 @@ import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Short}.
  */
 public final class ShortConverter implements Converting<Short>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Short convert(@Nullable final String @Nullable [] value)
+	public Short convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
-		if (value == null || value[0] == null) {
+		if (value == null || value.get(0) == null) {
 			return null;
 		}
 
 		try
 		{
-			return Short.parseShort(value[0]);
+			return Short.parseShort(value.get(0));
 		}
 		catch (NumberFormatException exception)
 		{

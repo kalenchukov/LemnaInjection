@@ -22,26 +22,28 @@ import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Float}.
  */
 public final class FloatConverter implements Converting<Float>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Float convert(@Nullable final String @Nullable [] value)
+	public Float convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
-		if (value == null || value[0] == null) {
+		if (value == null || value.get(0) == null) {
 			return null;
 		}
 
 		try
 		{
-			return Float.parseFloat(value[0]);
+			return Float.parseFloat(value.get(0));
 		}
 		catch (NumberFormatException exception)
 		{

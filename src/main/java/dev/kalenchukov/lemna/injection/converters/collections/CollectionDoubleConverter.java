@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class CollectionDoubleConverter implements Converting<Collection<Double>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Double> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Double> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Double[] convertValue = new ArrayOfDoubleConverter().convert(value);

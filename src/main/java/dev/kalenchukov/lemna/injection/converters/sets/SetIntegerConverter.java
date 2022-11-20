@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class SetIntegerConverter implements Converting<Set<Integer>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Set<@NotNull Integer> convert(@Nullable final String @Nullable [] value)
+	public Set<@NotNull Integer> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Integer[] convertValue = new ArrayOfIntegerConverter().convert(value);

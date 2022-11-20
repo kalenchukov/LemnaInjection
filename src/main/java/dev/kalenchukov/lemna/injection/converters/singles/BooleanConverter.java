@@ -22,24 +22,26 @@ import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.lemna.injection.exceptions.UnableConverterException;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Класс конвертирует тип данных {@code String[]} в {@code Boolean}.
  */
 public final class BooleanConverter implements Converting<Boolean>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Boolean convert(@Nullable final String @Nullable [] value)
+	public Boolean convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
-		if (value == null || value[0] == null) {
+		if (value == null || value.get(0) == null) {
 			return null;
 		}
 
-		return switch (value[0].toLowerCase())
+		return switch (value.get(0).toLowerCase())
 		{
 			case "true" -> true;
 			case "false" -> false;

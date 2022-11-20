@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class CollectionCharacterConverter implements Converting<Collection<Character>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Character> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Character> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Character[] convertValue = new ArrayOfCharacterConverter().convert(value);

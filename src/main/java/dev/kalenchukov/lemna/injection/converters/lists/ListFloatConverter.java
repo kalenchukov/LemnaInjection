@@ -34,11 +34,11 @@ import java.util.Objects;
 public final class ListFloatConverter implements Converting<List<Float>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public List<@NotNull Float> convert(@Nullable final String @Nullable [] value)
+	public List<@NotNull Float> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Float[] convertValue = new ArrayOfFloatConverter().convert(value);

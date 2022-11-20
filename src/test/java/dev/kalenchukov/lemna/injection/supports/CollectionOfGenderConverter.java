@@ -29,7 +29,7 @@ public class CollectionOfGenderConverter implements Converting<Collection<Gender
 {
     @Nullable
     @Override
-    public Collection<@NotNull Gender> convert(@Nullable String @Nullable [] value)
+    public Collection<@NotNull Gender> convert(@Nullable List<@Nullable String> value)
 		throws UnableConverterException
     {
         Gender[] convertValue = new ArrayOfGenderConverter().convert(value);

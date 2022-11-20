@@ -33,11 +33,11 @@ import java.util.Objects;
 public final class CollectionBooleanConverter implements Converting<Collection<Boolean>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public Collection<@NotNull Boolean> convert(@Nullable final String @Nullable [] value)
+	public Collection<@NotNull Boolean> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Boolean[] convertValue = new ArrayOfBooleanConverter().convert(value);

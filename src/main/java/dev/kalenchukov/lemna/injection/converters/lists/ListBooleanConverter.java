@@ -34,11 +34,11 @@ import java.util.Objects;
 public final class ListBooleanConverter implements Converting<List<Boolean>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public List<@NotNull Boolean> convert(@Nullable final String @Nullable [] value)
+	public List<@NotNull Boolean> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		Boolean[] convertValue = new ArrayOfBooleanConverter().convert(value);

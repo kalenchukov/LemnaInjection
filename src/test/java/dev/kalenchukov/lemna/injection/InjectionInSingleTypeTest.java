@@ -37,8 +37,8 @@ public class InjectionInSingleTypeTest
 			public Integer variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"1"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("1"));
 
 		Experimental experimental = new Experimental();
 
@@ -59,8 +59,8 @@ public class InjectionInSingleTypeTest
 			public Short variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"2"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("2"));
 
 		Experimental experimental = new Experimental();
 
@@ -81,8 +81,8 @@ public class InjectionInSingleTypeTest
 			public Float variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"3.0"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("3.0"));
 
 		Experimental experimental = new Experimental();
 
@@ -103,8 +103,8 @@ public class InjectionInSingleTypeTest
 			public Double variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"4.59"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("4.59"));
 
 		Experimental experimental = new Experimental();
 
@@ -125,8 +125,8 @@ public class InjectionInSingleTypeTest
 			public Long variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"1698756"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("1698756"));
 
 		Experimental experimental = new Experimental();
 
@@ -147,8 +147,8 @@ public class InjectionInSingleTypeTest
 			public String variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"text"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -169,8 +169,8 @@ public class InjectionInSingleTypeTest
 			public Character variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"A"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("A"));
 
 		Experimental experimental = new Experimental();
 
@@ -191,8 +191,8 @@ public class InjectionInSingleTypeTest
 			public Boolean variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"true"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("true"));
 
 		Experimental experimental = new Experimental();
 
@@ -213,8 +213,8 @@ public class InjectionInSingleTypeTest
 			public Byte variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{"27"});
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", List.of("27"));
 
 		Experimental experimental = new Experimental();
 
@@ -235,8 +235,11 @@ public class InjectionInSingleTypeTest
 			public Integer variable;
 		}
 
-		Map<String, String[]> data = new HashMap<>();
-		data.put("variable", new String[]{null});
+		List<String> values = new ArrayList<>();
+		values.add(null);
+
+		Map<String, List<String>> data = new HashMap<>();
+		data.put("variable", values);
 
 		Experimental experimental = new Experimental();
 

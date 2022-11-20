@@ -34,11 +34,11 @@ import java.util.Objects;
 public final class ListStringConverter implements Converting<List<String>>
 {
 	/**
-	 * @see Converting#convert(String[])
+	 * @see Converting#convert(List)
 	 */
 	@Override
 	@Nullable
-	public List<@NotNull String> convert(@Nullable final String @Nullable [] value)
+	public List<@NotNull String> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
 		String[] convertValue = new ArrayOfStringConverter().convert(value);
