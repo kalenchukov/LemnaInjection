@@ -164,14 +164,6 @@ experimental.getGender();
 // Результат выполнения: F
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/LemnaInjection.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/LemnaInjection/releases).
