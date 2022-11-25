@@ -176,10 +176,6 @@ git clone https://github.com/kalenchukov/LemnaInjection.git
 
 Доступные [версии](https://github.com/kalenchukov/LemnaInjection/releases).
 
-## Авторы
-
-[Алексей Каленчуков](https://github.com/kalenchukov)
-
 ## Лицензия
 
 [Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
