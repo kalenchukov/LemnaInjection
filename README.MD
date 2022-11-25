@@ -163,11 +163,3 @@ injection.inject(data);
 experimental.getGender();
 // Результат выполнения: F
 ```
-
-## Версии
-
-Доступные [версии](https://github.com/kalenchukov/LemnaInjection/releases).
-
-## Лицензия
-
-[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
