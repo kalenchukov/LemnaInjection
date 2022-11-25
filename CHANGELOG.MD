@@ -3,11 +3,11 @@
 ## vX.X.X - XX.XX.XXXX
 
 ### Добавлено
-* Добавлена аннотация @Documented к аннотациям.
+* Добавлена аннотация Documented к аннотациям.
 
 ### Изменено
 * Выставлена печать логов уровня INFO.
-* Изменён тип параметра метода Injectable.inject(Map<String, List<String>>)
+* Изменён тип параметра метода Injectable.inject(Map<String, List<String>>).
 * 
 
 ### Исправлено
