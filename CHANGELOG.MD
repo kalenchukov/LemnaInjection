@@ -4,11 +4,14 @@
 
 ### Добавлено
 * Добавлена аннотация Documented к аннотациям.
+* Добавлен AUTHOR.MD.
+* Добавлен INSTALL.MD.
+* Добавлен CHANGELOG.MD.
 
 ### Изменено
 * Выставлена печать логов уровня INFO.
 * Изменён тип параметра метода Injectable.inject(Map<String, List<String>>).
-* 
+* Обновлён README.MD.
 
 ### Исправлено
 *
