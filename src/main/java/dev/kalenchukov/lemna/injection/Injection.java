@@ -96,11 +96,11 @@ public class Injection implements Injectable
 		this.notationType = NotationType.CAMEL_CASE;
 		this.converterRepository = new ConverterRepository();
 		this.localeLogs = ResourceBundle.getBundle(
-			"lemna/injection/localizations/logs",
+			"/lemna/injection/localizations/logs",
 			this.locale
 		);
 		this.localeExceptions = ResourceBundle.getBundle(
-			"lemna/injection/localizations/exceptions",
+			"/lemna/injection/localizations/exceptions",
 			this.locale
 		);
 
@@ -121,12 +121,12 @@ public class Injection implements Injectable
 			this.locale = locale;
 
 			localeLogs = ResourceBundle.getBundle(
-				"lemna/injection/localizations/logs",
+				"/lemna/injection/localizations/logs",
 				this.locale
 			);
 
 			localeExceptions = ResourceBundle.getBundle(
-				"lemna/injection/localizations/exceptions",
+				"/lemna/injection/localizations/exceptions",
 				this.locale
 			);
 		}
