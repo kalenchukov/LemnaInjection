@@ -58,7 +58,7 @@ public final class ConverterRepository
 	/**
 	 * Возвращает коллекцию конвертеров типа данных.
 	 *
-	 * @return Коллекцию конвертеров типа данных.
+	 * @return коллекцию конвертеров типа данных.
 	 */
 	@UnmodifiableView
 	@NotNull
@@ -70,7 +70,7 @@ public final class ConverterRepository
 	/**
 	 * Возвращает конвертер типа данных.
 	 *
-	 * @return Конвертер типа данных.
+	 * @return конвертер типа данных.
 	 */
 	@Nullable
 	public Class<? extends Converting<?>> getConverter(@NotNull final String forType)
@@ -81,7 +81,7 @@ public final class ConverterRepository
 	/**
 	 * Добавляет коллекцию конвертеров типов данных.
 	 *
-	 * @param converters Коллекция конвертеров типов данных.
+	 * @param converters коллекция конвертеров типов данных.
 	 */
 	public void addConverters(@NotNull Map<@NotNull String, @NotNull Class<? extends Converting<?>>> converters)
 	{
@@ -93,8 +93,8 @@ public final class ConverterRepository
 	/**
 	 * Добавляет конвертер типа данных.
 	 *
-	 * @param forType Тип данных для которого используется конвертер.
-	 * @param converter Класс конвертера типа данных.
+	 * @param forType тип данных для которого используется конвертер.
+	 * @param converter класс конвертера типа данных.
 	 */
 	public void addConverter(@NotNull final String forType,
 							 @NotNull final Class<? extends Converting<?>> converter)

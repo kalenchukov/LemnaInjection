@@ -37,14 +37,14 @@ public interface Injectable
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локализация.
+	 * @param locale локализация.
 	 */
 	void setLocale(@NotNull Locale locale);
 
 	/**
 	 * Возвращает локализацию.
 	 *
-	 * @return Локализация.
+	 * @return локализация.
 	 */
 	@NotNull
 	Locale getLocale();
@@ -52,14 +52,14 @@ public interface Injectable
 	/**
 	 * Устанавливает тип нотации названий полей класса в данных.
 	 *
-	 * @param notationType Тип нотации.
+	 * @param notationType тип нотации.
 	 */
 	void setNotationType(@NotNull NotationType notationType);
 
 	/**
 	 * Возвращает тип нотации названий полей класса в данных.
 	 *
-	 * @return Тип нотации.
+	 * @return тип нотации.
 	 */
 	@NotNull
 	NotationType getNotationType();
@@ -67,14 +67,14 @@ public interface Injectable
 	/**
 	 * Внедряет данные в поля класса.
 	 *
-	 * @param data Данные которые необходимо внедрить в поля класса.
+	 * @param data данные которые необходимо внедрить в поля класса.
 	 * <ul>
 	 * 		<li><b>key</b> - поле класса в нотации Camel Case.</li>
 	 * 		<li><b>value</b> - массив значений.</li>
 	 * </ul>
-	 * @throws IllegalValueException Если передано некорректное значение для внедрения в данное поле класса.
-	 * @throws UnknownConverterException Если для типа поля не реализован персональный конвертер.
-	 * @throws InvalidConverterException Если конвертер некорректный.
+	 * @throws IllegalValueException если передано некорректное значение для внедрения в данное поле класса.
+	 * @throws UnknownConverterException если для типа поля не реализован персональный конвертер.
+	 * @throws InvalidConverterException если конвертер некорректный.
 	 */
 	void inject(@NotNull Map<@NotNull String, @Nullable List<@Nullable String>> data)
         throws IllegalValueException, UnknownConverterException, InvalidConverterException;

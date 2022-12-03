@@ -30,7 +30,7 @@ public class IllegalValueException extends RuntimeException
     /**
      * Конструктор для {@code IllegalValueException}.
      *
-     * @param message Сообщение.
+     * @param message сообщение.
      */
     public IllegalValueException(@NotNull final String message)
     {

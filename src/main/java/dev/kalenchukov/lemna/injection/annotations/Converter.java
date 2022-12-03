@@ -34,7 +34,7 @@ public @interface Converter
 	/**
 	 * Задаёт класс конвертера типа данных.
 	 *
-	 * @return Класс конвертера типа данных.
+	 * @return класс конвертера типа данных.
 	 */
 	@NotNull
 	Class<? extends Converting<?>> converter();

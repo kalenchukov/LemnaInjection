@@ -30,7 +30,7 @@ public class UnknownConverterException extends RuntimeException
 	/**
      * Конструктор для {@code UnknownConverterException}.
      *
-     * @param message Сообщение.
+     * @param message сообщение.
      */
     public UnknownConverterException(@NotNull final String message)
     {

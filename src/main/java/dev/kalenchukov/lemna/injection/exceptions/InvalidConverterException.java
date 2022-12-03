@@ -30,7 +30,7 @@ public class InvalidConverterException extends RuntimeException
 	/**
      * Конструктор для {@code InvalidConverterException}.
      *
-     * @param message Сообщение.
+     * @param message сообщение.
      */
     public InvalidConverterException(@NotNull final String message)
     {

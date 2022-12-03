@@ -85,7 +85,7 @@ public class Injection implements Injectable
 	/**
 	 * Конструктор для {@code Injection}.
 	 *
-	 * @param object Объект класса в который необходимо внедрить данные.
+	 * @param object объект класса в который необходимо внедрить данные.
 	 */
 	public Injection(@NotNull final Object object)
 	{
@@ -96,11 +96,11 @@ public class Injection implements Injectable
 		this.notationType = NotationType.CAMEL_CASE;
 		this.converterRepository = new ConverterRepository();
 		this.localeLogs = ResourceBundle.getBundle(
-			"/lemna/injection/localizations/logs",
+			"lemna/injection/localizations/logs",
 			this.locale
 		);
 		this.localeExceptions = ResourceBundle.getBundle(
-			"/lemna/injection/localizations/exceptions",
+			"lemna/injection/localizations/exceptions",
 			this.locale
 		);
 
@@ -121,12 +121,12 @@ public class Injection implements Injectable
 			this.locale = locale;
 
 			localeLogs = ResourceBundle.getBundle(
-				"/lemna/injection/localizations/logs",
+				"lemna/injection/localizations/logs",
 				this.locale
 			);
 
 			localeExceptions = ResourceBundle.getBundle(
-				"/lemna/injection/localizations/exceptions",
+				"lemna/injection/localizations/exceptions",
 				this.locale
 			);
 		}
@@ -219,12 +219,12 @@ public class Injection implements Injectable
 	/**
 	 * Внедряет значение в поле класса.
 	 *
-	 * @param field Поле класса в которое необходимо внедрить значение.
-	 * @param value Коллекция значений которые необходимо внедрить в поле класса.
+	 * @param field поле класса в которое необходимо внедрить значение.
+	 * @param value коллекция значений которые необходимо внедрить в поле класса.
 	 *
-	 * @throws IllegalValueException Если передано некорректное значение для внедрения в данное поле класса.
-	 * @throws UnknownConverterException Если для типа поля не реализован персональный конвертер.
-	 * @throws InvalidConverterException Если конвертер некорректный.
+	 * @throws IllegalValueException если передано некорректное значение для внедрения в данное поле класса.
+	 * @throws UnknownConverterException если для типа поля не реализован персональный конвертер.
+	 * @throws InvalidConverterException если конвертер некорректный.
 	 */
 	private void injectValueField(@NotNull final Field field, @Nullable final List<@Nullable String> value)
 		throws IllegalValueException, UnknownConverterException, InvalidConverterException
