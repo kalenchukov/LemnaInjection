@@ -34,7 +34,6 @@ Set<Character>, Set<Boolean>, Set<Byte>
 
 #### Внедрение значений в поля класса
 Класс, в поля которого необходимо внедрить значения:
-
 ```java
 public class Experimental
 {
@@ -63,7 +62,6 @@ data.put("varTwo", List.of("13"));
 ```
 
 Вызов инжектора:
-
 ```java
 import dev.kalenchukov.lemna.injection.Injection;
 import dev.kalenchukov.lemna.injection.Injectable;
@@ -74,10 +72,18 @@ Injectable injection = new Injection(experimental);
 injection.inject(data);
 
 experimental.getVarOne();
-// Результат выполнения: Значение первого поля
+```
+
+Результат выполнения:
+```
+Значение первого поля
 
 experimental.getVarTwo();
-// Результат выполнения: 13
+```
+
+Результат выполнения:
+```
+13
 ```
 
 #### Создание конвертера типа данных
@@ -121,7 +127,6 @@ public final class GenderConverter implements Converting<Gender>
 ```
 
 Класс для поля которого необходим конвертер:
-
 ```java
 import dev.kalenchukov.lemna.injection.annotations.Converter;
 
@@ -138,14 +143,12 @@ public class Experimental
 ```
 
 Данные для внедрения:
-
 ```java
 Map<String, List<String>> data = new HashMap<>();
 data.put("gender", List.of("F"));
 ```
 
 Вызов инжектора:
-
 ```java
 import dev.kalenchukov.lemna.injection.Injection;
 import dev.kalenchukov.lemna.injection.Injectable;
@@ -156,5 +159,9 @@ Injectable injection = new Injection(experimental);
 injection.inject(data);
 
 experimental.getGender();
-// Результат выполнения: F
+```
+
+Результат выполнения:
+```
+F
 ```
