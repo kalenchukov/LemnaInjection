@@ -22,11 +22,11 @@ import dev.kalenchukov.lemna.injection.annotations.Converter;
 import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
 import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.supports.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InjectionInSelfTypeTest
 {
@@ -82,7 +82,7 @@ public class InjectionInSelfTypeTest
 	/**
 	 * Проверка использования неподходящего собственного конвертера типа данных.
 	 */
-	@Test(expected = InvalidConverterException.class)
+	@Test
 	public void testInjectionSelfNegativeConverter()
 	{
 		class Experimental
@@ -96,8 +96,10 @@ public class InjectionInSelfTypeTest
 
 		Experimental experimental = new Experimental();
 
-		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		assertThrows(InvalidConverterException.class, () -> {
+			Injectable injector = new Injection(experimental);
+			injector.inject(data);
+		});
 	}
 
 	/**
@@ -198,7 +200,7 @@ public class InjectionInSelfTypeTest
 	/**
 	 * Проверка внедрения {@code null} в коллекцию {@code List} из своего типа данных {@code Gender}.
 	 */
-	@Test(expected = IllegalValueException.class)
+	@Test
 	public void testInjectionSelfTypeInListNull()
 	{
 		class Experimental
@@ -215,8 +217,10 @@ public class InjectionInSelfTypeTest
 
 		Experimental experimental = new Experimental();
 
-		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		assertThrows(IllegalValueException.class, () -> {
+			Injectable injector = new Injection(experimental);
+			injector.inject(data);
+		});
 	}
 
 	/**
@@ -245,7 +249,7 @@ public class InjectionInSelfTypeTest
 	/**
 	 * Проверка внедрения дублирующих значений {@code Gender} в коллекцию {@code Set}.
 	 */
-	@Test(expected = IllegalValueException.class)
+	@Test
 	public void testInjectionSelfTypeInSetFromDuplicate()
 	{
 		class Experimental
@@ -259,7 +263,9 @@ public class InjectionInSelfTypeTest
 
 		Experimental experimental = new Experimental();
 
-		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		assertThrows(IllegalValueException.class, () -> {
+			Injectable injector = new Injection(experimental);
+			injector.inject(data);
+		});
 	}
 }

@@ -19,11 +19,11 @@
 package dev.kalenchukov.lemna.injection;
 
 import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InjectionInListTypeTest
 {
@@ -228,7 +228,7 @@ public class InjectionInListTypeTest
 	/**
 	 * Проверка внедрения {@code null} в {@code List}.
 	 */
-	@Test(expected = IllegalValueException.class)
+	@Test
 	public void testInjectionListTypeNull()
 	{
 		class Experimental
@@ -244,8 +244,10 @@ public class InjectionInListTypeTest
 
 		Experimental experimental = new Experimental();
 
-		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		assertThrows(IllegalValueException.class, () -> {
+			Injectable injector = new Injection(experimental);
+			injector.inject(data);
+		});
 	}
 
 	/**

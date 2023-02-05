@@ -20,18 +20,18 @@ package dev.kalenchukov.lemna.injection;
 
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
 import dev.kalenchukov.notation.converting.resources.NotationType;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InjectionTest
 {
 	/**
 	 * Проверка внедрения в примитивные типы данных.
 	 */
-	@Test(expected = UnknownConverterException.class)
+	@Test
 	public void testInjectionPrimitiveType()
 	{
 		class Experimental
@@ -44,8 +44,10 @@ public class InjectionTest
 
 		Experimental experimental = new Experimental();
 
-		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		assertThrows(UnknownConverterException.class, () -> {
+			Injectable injector = new Injection(experimental);
+			injector.inject(data);
+		});
 	}
 
 	/**
@@ -53,7 +55,7 @@ public class InjectionTest
 	 * В качестве неизвестного типа данных коллекция {@code List} из {@code String[]},
 	 * для которого нет стандартного конвертера.
 	 */
-	@Test(expected = UnknownConverterException.class)
+	@Test
 	public void testInjectionUnknownType()
 	{
 		class Experimental
@@ -66,8 +68,10 @@ public class InjectionTest
 
 		Experimental experimental = new Experimental();
 
-		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		assertThrows(UnknownConverterException.class, () -> {
+			Injectable injector = new Injection(experimental);
+			injector.inject(data);
+		});
 	}
 
 	/**
