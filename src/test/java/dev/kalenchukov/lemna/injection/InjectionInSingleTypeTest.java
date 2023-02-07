@@ -24,10 +24,13 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Injection} со стандартными одиночными типами объектов.
+ */
 public class InjectionInSingleTypeTest
 {
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Integer}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Integer}.
 	 */
 	@Test
 	public void testInjectionIntegerType()
@@ -49,7 +52,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Short}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Short}.
 	 */
 	@Test
 	public void testInjectionShortType()
@@ -71,7 +74,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Float}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Float}.
 	 */
 	@Test
 	public void testInjectionFloatType()
@@ -91,9 +94,9 @@ public class InjectionInSingleTypeTest
 
 		assertEquals(Float.valueOf(3.0F), experimental.variable);
 	}
-	
+
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Double}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Double}.
 	 */
 	@Test
 	public void testInjectionDoubleType()
@@ -115,7 +118,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Long}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Long}.
 	 */
 	@Test
 	public void testInjectionLongType()
@@ -137,7 +140,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code String}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code String}.
 	 */
 	@Test
 	public void testInjectionStringType()
@@ -159,7 +162,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Character}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Character}.
 	 */
 	@Test
 	public void testInjectionCharacterType()
@@ -181,7 +184,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Boolean}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Boolean}.
 	 */
 	@Test
 	public void testInjectionBooleanType()
@@ -203,7 +206,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в одиночный тип данных {@code Byte}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Byte}.
 	 */
 	@Test
 	public void testInjectionByteType()
@@ -225,7 +228,7 @@ public class InjectionInSingleTypeTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null} в одиночный тип данных.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в одиночный тип данных.
 	 */
 	@Test
 	public void testInjectionNull()

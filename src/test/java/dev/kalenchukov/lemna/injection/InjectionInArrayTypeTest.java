@@ -24,10 +24,13 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Injection} с объектами типа {@code Array}.
+ */
 public class InjectionInArrayTypeTest
 {
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Integer[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Integer[]}.
 	 */
 	@Test
 	public void testInjectionArrayIntegerType()
@@ -49,7 +52,7 @@ public class InjectionInArrayTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Short[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Short[]}.
 	 */
 	@Test
 	public void testInjectionArrayShortType()
@@ -71,7 +74,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Float[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Float[]}.
 	 */
 	@Test
 	public void testInjectionArrayFloatType()
@@ -93,7 +96,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Double[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Double[]}.
 	 */
 	@Test
 	public void testInjectionArrayDoubleType()
@@ -115,7 +118,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Long[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Long[]}.
 	 */
 	@Test
 	public void testInjectionArrayLongType()
@@ -137,7 +140,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code String[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code String[]}.
 	 */
 	@Test
 	public void testInjectionArrayStringType()
@@ -159,7 +162,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Character[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Character[]}.
 	 */
 	@Test
 	public void testInjectionArrayCharacterType()
@@ -181,7 +184,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Boolean[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Boolean[]}.
 	 */
 	@Test
 	public void testInjectionArrayBooleanType()
@@ -203,7 +206,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в массив одиночного типа данных {@code Byte[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Byte[]}.
 	 */
 	@Test
 	public void testInjectionArrayByteType()
@@ -225,7 +228,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null} в массив одиночного типа данных.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Array}.
 	 */
 	@Test
 	public void testInjectionArrayTypeNull()
@@ -250,7 +253,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка внедрения дублирующих значений в массив одиночного типа данных.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений в {@code Array}.
 	 */
 	@Test
 	public void testInjectionArrayTypeDuplicate()

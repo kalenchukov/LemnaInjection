@@ -25,10 +25,13 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Injection} с объектами типа {@code Collection}.
+ */
 public class InjectionInCollectionTypeTest
 {
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Integer}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Integer}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromInteger()
@@ -50,7 +53,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Short}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Short}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromShort()
@@ -72,7 +75,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Float}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Float}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromFloat()
@@ -94,7 +97,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Double}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Double}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromDouble()
@@ -116,7 +119,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Long}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Long}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromLong()
@@ -138,7 +141,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code String}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code String}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromString()
@@ -160,7 +163,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Character}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Character}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromCharacter()
@@ -182,7 +185,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Boolean}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Boolean}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromBoolean()
@@ -204,7 +207,7 @@ public class InjectionInCollectionTypeTest
 	}
 	
 	/**
-	 * Проверка внедрения в {@code Collection} из {@code Byte}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection} из {@code Byte}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeFromByte()
@@ -226,7 +229,7 @@ public class InjectionInCollectionTypeTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null} в {@code Collection}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Collection}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeNull()
@@ -251,7 +254,7 @@ public class InjectionInCollectionTypeTest
 	}
 
 	/**
-	 * Проверка внедрения дублирующих значений в {@code Collection}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений в {@code Collection}.
 	 */
 	@Test
 	public void testInjectionCollectionTypeDuplicate()

@@ -26,10 +26,13 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Injection}.
+ */
 public class InjectionTest
 {
 	/**
-	 * Проверка внедрения в примитивные типы данных.
+	 * Проверка метода {@link Injection#inject(Map)} с примитивным типом данных.
 	 */
 	@Test
 	public void testInjectionPrimitiveType()
@@ -51,7 +54,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения в поле с неизвестным типом данных.<br>
+	 * Проверка метода {@link Injection#inject(Map)} с неизвестным типом данных.<br>
 	 * В качестве неизвестного типа данных коллекция {@code List} из {@code String[]},
 	 * для которого нет стандартного конвертера.
 	 */
@@ -75,7 +78,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null}.
 	 */
 	@Test
 	public void testInjectionNull()
@@ -97,7 +100,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения без данных.
+	 * Проверка метода {@link Injection#inject(Map)} без данных.
 	 */
 	@Test
 	public void testInjectionNotData()
@@ -118,7 +121,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения данных в нотации Camel Case.
+	 * Проверка метода {@link Injection#inject(Map)} с нотацией Camel Case.
 	 */
 	@Test
 	public void testInjectionNotationCamelCase()
@@ -141,7 +144,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения данных в нотации Kebab Case.
+	 * Проверка метода {@link Injection#inject(Map)} с нотацией Kebab Case.
 	 */
 	@Test
 	public void testInjectionNotationKebabCase()
@@ -164,7 +167,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения данных в нотации Upper Case.
+	 * Проверка метода {@link Injection#inject(Map)} с нотацией Upper Case.
 	 */
 	@Test
 	public void testInjectionNotationUpperCase()
@@ -187,7 +190,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения данных в нотации Snake Case.
+	 * Проверка метода {@link Injection#inject(Map)} с нотацией Snake Case.
 	 */
 	@Test
 	public void testInjectionNotationSnakeCase()
@@ -210,7 +213,7 @@ public class InjectionTest
 	}
 
 	/**
-	 * Проверка внедрения данных в нотации Pascal Case.
+	 * Проверка метода {@link Injection#inject(Map)} с нотацией Pascal Case.
 	 */
 	@Test
 	public void testInjectionNotationPascalCase()

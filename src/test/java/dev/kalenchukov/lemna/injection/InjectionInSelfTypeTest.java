@@ -28,10 +28,13 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Injection} с объектами собственного типа.
+ */
 public class InjectionInSelfTypeTest
 {
 	/**
-	 * Проверка внедрения в тип данных {@code Gender}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в тип данных {@code Gender}.
 	 */
 	@Test()
 	public void testInjectionSelfType()
@@ -54,7 +57,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null} в тип данных {@code Gender}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в тип данных свой тип данных.
 	 */
 	@Test()
 	public void testInjectionSelfTypeArrayFromNull()
@@ -80,7 +83,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка использования неподходящего собственного конвертера типа данных.
+	 * Проверка метода {@link Injection#inject(Map)} с использованием неподходящего собственного конвертера типа данных.
 	 */
 	@Test
 	public void testInjectionSelfNegativeConverter()
@@ -103,7 +106,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения в тип данных {@code Gender[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в тип данных {@code Gender[]}.
 	 */
 	@Test
 	public void testInjectionSelfArrayType()
@@ -126,7 +129,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null} в массив из своего типа данных {@code Gender}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Array} из своего типа данных.
 	 */
 	@Test
 	public void testInjectionSelfArrayTypeNull()
@@ -152,7 +155,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения своего типа данных {@code Gender} в коллекцию {@code Collection}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code Collection}.
 	 */
 	@Test
 	public void testInjectionSelfTypeInCollection()
@@ -175,7 +178,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения своего типа данных {@code Gender} в коллекцию {@code List}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code List}.
 	 */
 	@Test
 	public void testInjectionSelfTypeInList()
@@ -198,7 +201,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения {@code null} в коллекцию {@code List} из своего типа данных {@code Gender}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code List} из своего типа данных.
 	 */
 	@Test
 	public void testInjectionSelfTypeInListNull()
@@ -224,7 +227,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения своего типа данных {@code Gender} в коллекцию {@code Set}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code Set}.
 	 */
 	@Test
 	public void testInjectionSelfTypeInSet()
@@ -247,7 +250,7 @@ public class InjectionInSelfTypeTest
 	}
 
 	/**
-	 * Проверка внедрения дублирующих значений {@code Gender} в коллекцию {@code Set}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений своего типа данных в {@code Set}.
 	 */
 	@Test
 	public void testInjectionSelfTypeInSetFromDuplicate()
