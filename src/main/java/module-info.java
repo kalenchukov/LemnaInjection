@@ -5,7 +5,7 @@ module dev.kalenchukov.lemna.injection
 {
 	requires org.jetbrains.annotations;
 	requires log4j;
-	requires dev.kalenchukov.notation.converting;
+	requires dev.kalenchukov.notation;
 
 	exports dev.kalenchukov.lemna.injection;
 	exports dev.kalenchukov.lemna.injection.annotations;

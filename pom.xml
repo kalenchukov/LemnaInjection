@@ -69,8 +69,8 @@
 		</dependency>
 		<dependency>
 			<groupId>dev.kalenchukov</groupId>
-			<artifactId>notation-converting</artifactId>
-			<version>1.4.0</version>
+			<artifactId>notation</artifactId>
+			<version>1.5.0</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>

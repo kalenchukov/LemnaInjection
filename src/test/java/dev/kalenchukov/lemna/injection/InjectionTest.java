@@ -19,7 +19,7 @@
 package dev.kalenchukov.lemna.injection;
 
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
-import dev.kalenchukov.notation.converting.resources.NotationType;
+import dev.kalenchukov.notation.resources.NotationType;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

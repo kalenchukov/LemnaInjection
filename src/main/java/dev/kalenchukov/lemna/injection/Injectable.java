@@ -21,7 +21,7 @@ package dev.kalenchukov.lemna.injection;
 import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
-import dev.kalenchukov.notation.converting.resources.NotationType;
+import dev.kalenchukov.notation.resources.NotationType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
