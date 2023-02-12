@@ -25,9 +25,9 @@
 * Добавлен плагин maven-source в pom.xml.
 
 ### Изменено
-* Изменена версия требуемого модуля NotationConverting.
+* Изменена версия требуемого модуля notation-converting.
 * Переименован метод ConverterRepository.addConverters() -> ConverterRepository.addConvertersSimple().
-* Перемещён класс ConverterRepository в пакет repositories.
+* Класс ConverterRepository перемещён в пакет repositories.
 
 ## v1.1.0 - 15.09.2022
 ### Изменено
