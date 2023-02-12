@@ -55,7 +55,6 @@ public class Experimental
 ```
 
 Данные которые необходимо внедрить в поля.
-
 ```java
 Map<String, List<String>> data = new HashMap<>();
 data.put("varOne", List.of("Значение первого поля"));
@@ -73,17 +72,12 @@ Injectable injection = new Injection(experimental);
 injection.inject(data);
 
 experimental.getVarOne();
-```
-
-Результат выполнения:
-```
-Значение первого поля
-
 experimental.getVarTwo();
 ```
 
 Результат выполнения:
 ```
+Значение первого поля
 13
 ```
 
@@ -110,18 +104,17 @@ public final class GenderConverter implements Converting<Gender>
 	@Override
 	public Gender convert(@Nullable List<@Nullable String> value) throws UnableConverterException
 	{
-		if (value == null || value.get(0) == null)
-		{
-			return null;
+		if (value == null || value.get(0) == null) {
+		    return null;
 		}
 
 		try
-        {
-			return Gender.valueOf(value.get(0));
+		{
+		    return Gender.valueOf(value.get(0));
 		}
 		catch (IllegalArgumentException exception)
-        {
-			throw new UnableConverterException();
+		{
+		    throw new UnableConverterException();
 		}
 	}
 }
