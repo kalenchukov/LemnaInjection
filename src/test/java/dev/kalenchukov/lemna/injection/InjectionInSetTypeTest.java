@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InjectionInSetTypeTest
 {
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Integer}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Integer>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromInteger()
@@ -53,7 +53,7 @@ public class InjectionInSetTypeTest
 	}
 	
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Short}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Short>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromShort()
@@ -75,7 +75,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Float}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Float>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromFloat()
@@ -97,7 +97,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Double}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Double>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromDouble()
@@ -119,7 +119,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Long}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Long>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromLong()
@@ -141,7 +141,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code String}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<String>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromString()
@@ -163,7 +163,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Character}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Character>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromCharacter()
@@ -185,7 +185,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Boolean}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Boolean>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromBoolean()
@@ -207,7 +207,7 @@ public class InjectionInSetTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set} из {@code Byte}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Byte>}.
 	 */
 	@Test
 	public void testInjectionSetTypeFromByte()

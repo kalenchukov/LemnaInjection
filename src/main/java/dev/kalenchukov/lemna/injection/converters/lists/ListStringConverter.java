@@ -29,12 +29,16 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code List} из {@code String}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code List<String>}.
  */
 public final class ListStringConverter implements Converting<List<String>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

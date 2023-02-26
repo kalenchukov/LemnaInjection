@@ -27,12 +27,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Float[]}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Float[]}.
  */
 public final class ArrayOfFloatConverter implements Converting<Float[]>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

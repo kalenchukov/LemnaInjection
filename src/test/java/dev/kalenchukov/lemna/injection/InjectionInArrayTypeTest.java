@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InjectionInArrayTypeTest
 {
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Integer[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Integer[]}.
 	 */
 	@Test
 	public void testInjectionArrayIntegerType()
@@ -52,7 +52,7 @@ public class InjectionInArrayTypeTest
 	}
 	
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Short[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Short[]}.
 	 */
 	@Test
 	public void testInjectionArrayShortType()
@@ -74,7 +74,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Float[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Float[]}.
 	 */
 	@Test
 	public void testInjectionArrayFloatType()
@@ -96,7 +96,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Double[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Double[]}.
 	 */
 	@Test
 	public void testInjectionArrayDoubleType()
@@ -118,7 +118,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Long[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Long[]}.
 	 */
 	@Test
 	public void testInjectionArrayLongType()
@@ -140,7 +140,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code String[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code String[]}.
 	 */
 	@Test
 	public void testInjectionArrayStringType()
@@ -162,7 +162,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Character[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Character[]}.
 	 */
 	@Test
 	public void testInjectionArrayCharacterType()
@@ -184,7 +184,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Boolean[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Boolean[]}.
 	 */
 	@Test
 	public void testInjectionArrayBooleanType()
@@ -206,7 +206,7 @@ public class InjectionInArrayTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Array} из {@code Byte[]}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Byte[]}.
 	 */
 	@Test
 	public void testInjectionArrayByteType()

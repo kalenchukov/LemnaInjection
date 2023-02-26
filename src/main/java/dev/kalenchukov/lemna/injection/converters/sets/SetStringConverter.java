@@ -30,12 +30,16 @@ import java.util.Set;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Set} из {@code String}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Set<String>}.
  */
 public final class SetStringConverter implements Converting<Set<String>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

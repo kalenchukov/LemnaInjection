@@ -30,12 +30,16 @@ import java.util.Set;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Set} из {@code Double}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Set<Double>}.
  */
 public final class SetDoubleConverter implements Converting<Set<Double>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

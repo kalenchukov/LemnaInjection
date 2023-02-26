@@ -27,12 +27,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Double[]}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Double[]}.
  */
 public final class ArrayOfDoubleConverter implements Converting<Double[]>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

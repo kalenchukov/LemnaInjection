@@ -28,12 +28,16 @@ import java.util.*;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Collection} из {@code Double}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Collection<Double>}.
  */
 public final class CollectionDoubleConverter implements Converting<Collection<Double>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

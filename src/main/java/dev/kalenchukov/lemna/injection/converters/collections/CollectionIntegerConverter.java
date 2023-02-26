@@ -30,12 +30,16 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Collection} из {@code Integer}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Collection<Integer>}.
  */
 public final class CollectionIntegerConverter implements Converting<Collection<Integer>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

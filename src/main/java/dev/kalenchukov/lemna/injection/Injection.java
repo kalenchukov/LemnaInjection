@@ -110,9 +110,12 @@ public class Injection implements Injectable
 	}
 
 	/**
-	 * @see Injectable#setLocale(Locale)
+	 * {@inheritDoc}
+	 *
+	 * @param locale {@inheritDoc}
 	 */
-	public void setLocale(@NotNull Locale locale)
+	@Override
+	public void setLocale(@NotNull final Locale locale)
 	{
 		Objects.requireNonNull(locale);
 
@@ -133,7 +136,9 @@ public class Injection implements Injectable
 	}
 
 	/**
-	 * @see Injectable#getLocale()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -143,7 +148,9 @@ public class Injection implements Injectable
 	}
 
 	/**
-	 * @see Injectable#setNotationType(NotationType)
+	 * {@inheritDoc}
+	 *
+	 * @param notationType {@inheritDoc}
 	 */
 	@Override
 	public void setNotationType(@NotNull final NotationType notationType)
@@ -154,7 +161,9 @@ public class Injection implements Injectable
 	}
 
 	/**
-	 * @see Injectable#getNotationType()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -164,7 +173,12 @@ public class Injection implements Injectable
 	}
 
 	/**
-	 * @see Injectable#inject(Map)
+	 * {@inheritDoc}
+	 *
+	 * @param data {@inheritDoc}
+	 * @throws IllegalValueException {@inheritDoc}
+	 * @throws UnknownConverterException {@inheritDoc}
+	 * @throws InvalidConverterException {@inheritDoc}
 	 */
 	@Override
 	public void inject(@NotNull final Map<@NotNull String, @Nullable List<@Nullable String>> data)
@@ -221,7 +235,6 @@ public class Injection implements Injectable
 	 *
 	 * @param field поле класса в которое необходимо внедрить значение.
 	 * @param value коллекция значений которые необходимо внедрить в поле класса.
-	 *
 	 * @throws IllegalValueException если передано некорректное значение для внедрения в данное поле класса.
 	 * @throws UnknownConverterException если для типа поля не реализован персональный конвертер.
 	 * @throws InvalidConverterException если конвертер некорректный.

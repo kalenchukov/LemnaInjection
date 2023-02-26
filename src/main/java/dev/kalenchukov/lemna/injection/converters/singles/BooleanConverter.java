@@ -25,12 +25,16 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Boolean}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Boolean}.
  */
 public final class BooleanConverter implements Converting<Boolean>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

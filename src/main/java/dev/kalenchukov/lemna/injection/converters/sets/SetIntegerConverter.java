@@ -28,12 +28,16 @@ import java.util.*;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Set} из {@code Integer}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Set<Integer>}.
  */
 public final class SetIntegerConverter implements Converting<Set<Integer>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

@@ -30,12 +30,16 @@ import java.util.Set;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Set} из {@code Byte}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Set<Byte>}.
  */
 public final class SetByteConverter implements Converting<Set<Byte>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

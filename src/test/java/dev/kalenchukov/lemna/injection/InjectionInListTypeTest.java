@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InjectionInListTypeTest
 {
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Integer}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Integer>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromInteger()
@@ -53,7 +53,7 @@ public class InjectionInListTypeTest
 	}
 	
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Short}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Short>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromShort()
@@ -75,7 +75,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Float}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Float>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromFloat()
@@ -97,7 +97,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Double}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Double>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromDouble()
@@ -119,7 +119,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Long}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Long>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromLong()
@@ -141,7 +141,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code String}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<String>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromString()
@@ -163,7 +163,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Character}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Character>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromCharacter()
@@ -185,7 +185,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Boolean}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Boolean>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromBoolean()
@@ -207,7 +207,7 @@ public class InjectionInListTypeTest
 	}
 
 	/**
-	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List} из {@code Byte}.
+	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Byte>}.
 	 */
 	@Test
 	public void testInjectionListTypeFromByte()

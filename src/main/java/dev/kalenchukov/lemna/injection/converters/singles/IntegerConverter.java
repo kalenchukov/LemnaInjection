@@ -25,12 +25,16 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Integer}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Integer}.
  */
 public final class IntegerConverter implements Converting<Integer>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

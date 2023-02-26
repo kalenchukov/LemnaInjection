@@ -28,12 +28,16 @@ import java.util.*;
 import java.util.Objects;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Collection} из {@code Byte}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Collection<Byte>}.
  */
 public final class CollectionByteConverter implements Converting<Collection<Byte>>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable

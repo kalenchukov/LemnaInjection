@@ -27,12 +27,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Класс конвертирует тип данных {@code String[]} в {@code Short[]}.
+ * Класс конвертирует тип данных {@code List<String>} в {@code Short[]}.
  */
 public final class ArrayOfShortConverter implements Converting<Short[]>
 {
 	/**
-	 * @see Converting#convert(List)
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws UnableConverterException {@inheritDoc}
 	 */
 	@Override
 	@Nullable
