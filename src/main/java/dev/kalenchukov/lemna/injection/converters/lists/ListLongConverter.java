@@ -30,6 +30,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code List<Long>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ListLongConverter implements Converting<List<Long>>
 {

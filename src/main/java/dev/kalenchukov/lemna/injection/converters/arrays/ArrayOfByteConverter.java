@@ -28,6 +28,8 @@ import java.util.List;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Byte[]}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ArrayOfByteConverter implements Converting<Byte[]>
 {

@@ -31,6 +31,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Set<Boolean>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class SetBooleanConverter implements Converting<Set<Boolean>>
 {

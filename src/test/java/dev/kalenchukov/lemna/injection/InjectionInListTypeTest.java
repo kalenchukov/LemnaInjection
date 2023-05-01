@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link Injection} с объектами типа {@code List}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class InjectionInListTypeTest
 {

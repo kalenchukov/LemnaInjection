@@ -26,6 +26,8 @@ import java.util.List;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Float}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class FloatConverter implements Converting<Float>
 {

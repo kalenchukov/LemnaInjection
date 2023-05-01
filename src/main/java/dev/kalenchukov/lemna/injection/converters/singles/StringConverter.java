@@ -26,6 +26,8 @@ import java.util.List;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code String}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class StringConverter implements Converting<String>
 {

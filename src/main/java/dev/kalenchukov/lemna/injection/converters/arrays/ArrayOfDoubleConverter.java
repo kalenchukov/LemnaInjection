@@ -28,6 +28,8 @@ import java.util.List;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Double[]}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ArrayOfDoubleConverter implements Converting<Double[]>
 {

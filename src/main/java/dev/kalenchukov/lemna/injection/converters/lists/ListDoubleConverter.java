@@ -30,6 +30,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code List<Double>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ListDoubleConverter implements Converting<List<Double>>
 {

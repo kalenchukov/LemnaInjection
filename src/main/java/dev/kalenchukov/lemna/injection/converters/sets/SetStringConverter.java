@@ -31,6 +31,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Set<String>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class SetStringConverter implements Converting<Set<String>>
 {

@@ -26,6 +26,8 @@ import java.util.List;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Long}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class LongConverter implements Converting<Long>
 {

@@ -32,6 +32,8 @@ import java.util.*;
 
 /**
  * Класс репозиторий всех конвертеров типа данных.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ConverterRepository
 {

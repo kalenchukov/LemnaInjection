@@ -24,6 +24,8 @@ import java.util.Objects;
 
 /**
  * Исключение для некорректного конвертера значений внедрения.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class InvalidConverterException extends RuntimeException
 {

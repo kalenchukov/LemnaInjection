@@ -31,6 +31,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Set<Long>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class SetLongConverter implements Converting<Set<Long>>
 {

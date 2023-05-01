@@ -26,6 +26,8 @@ import java.util.List;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Short}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ShortConverter implements Converting<Short>
 {

@@ -30,6 +30,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code List<Character>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ListCharacterConverter implements Converting<List<Character>>
 {

@@ -24,6 +24,8 @@ import java.util.Objects;
 
 /**
  * Исключение для некорректного значения для внедрения.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class IllegalValueException extends RuntimeException
 {

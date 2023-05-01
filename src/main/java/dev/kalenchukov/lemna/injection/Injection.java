@@ -37,6 +37,8 @@ import java.util.*;
 
 /**
  * Внедряет данные в поля класса.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class Injection implements Injectable
 {

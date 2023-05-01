@@ -31,6 +31,8 @@ import java.util.Objects;
 
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Set<Float>}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class SetFloatConverter implements Converting<Set<Float>>
 {
