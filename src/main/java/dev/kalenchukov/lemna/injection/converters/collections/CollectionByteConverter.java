@@ -30,7 +30,7 @@ import java.util.Objects;
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Collection<Byte>}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class CollectionByteConverter implements Converting<Collection<Byte>>
 {

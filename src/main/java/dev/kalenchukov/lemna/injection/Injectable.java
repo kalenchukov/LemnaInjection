@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * Интерфейс для реализации внедряющего в поля класса данные.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Injectable
 {

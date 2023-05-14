@@ -33,7 +33,7 @@ import java.util.*;
 /**
  * Класс репозиторий всех конвертеров типа данных.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ConverterRepository
 {

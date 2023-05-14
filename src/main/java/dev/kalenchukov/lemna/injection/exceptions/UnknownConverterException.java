@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * Исключение для неопределённого конвертера для значения внедрения.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class UnknownConverterException extends RuntimeException
 {

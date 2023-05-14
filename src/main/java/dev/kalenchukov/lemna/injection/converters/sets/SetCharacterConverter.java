@@ -32,7 +32,7 @@ import java.util.Objects;
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Set<Character>}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SetCharacterConverter implements Converting<Set<Character>>
 {

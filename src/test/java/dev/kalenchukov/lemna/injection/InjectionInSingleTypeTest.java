@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки методов класса {@link Injection} со стандартными одиночными типами объектов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class InjectionInSingleTypeTest
 {

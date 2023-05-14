@@ -26,7 +26,7 @@ import java.lang.annotation.*;
 /**
  * Задаёт персональный конвертер типа данных для поля класса.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

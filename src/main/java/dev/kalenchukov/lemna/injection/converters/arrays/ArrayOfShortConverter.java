@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Short[]}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ArrayOfShortConverter implements Converting<Short[]>
 {

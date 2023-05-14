@@ -31,7 +31,7 @@ import java.util.Objects;
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code List<Integer>}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ListIntegerConverter implements Converting<List<Integer>>
 {

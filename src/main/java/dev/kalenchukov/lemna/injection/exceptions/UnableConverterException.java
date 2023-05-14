@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * Исключение для невозможности конвертирования значения внедрения.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class UnableConverterException extends RuntimeException
 {

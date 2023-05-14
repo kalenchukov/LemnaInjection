@@ -30,7 +30,7 @@ import java.util.Objects;
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code Set<Integer>}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SetIntegerConverter implements Converting<Set<Integer>>
 {

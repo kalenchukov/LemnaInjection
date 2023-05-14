@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * Класс конвертирует тип данных {@code List<String>} в {@code String[]}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ArrayOfStringConverter implements Converting<String[]>
 {

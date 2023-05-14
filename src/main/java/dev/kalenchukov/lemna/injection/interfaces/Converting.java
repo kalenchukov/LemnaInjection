@@ -27,7 +27,7 @@ import java.util.List;
  * Интерфейс для реализации собственного класса конвертера типа значений.
  *
  * @param <T> Объект типа возвращаемых данных.
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Converting<T>
 {

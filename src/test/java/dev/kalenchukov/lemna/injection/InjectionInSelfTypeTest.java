@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки методов класса {@link Injection} с объектами собственного типа.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class InjectionInSelfTypeTest
 {
