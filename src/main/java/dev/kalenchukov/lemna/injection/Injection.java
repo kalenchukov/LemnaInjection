@@ -26,7 +26,8 @@ import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
 import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.notation.Notation;
 import dev.kalenchukov.notation.resources.NotationType;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -82,7 +83,7 @@ public class Injection implements Injectable
 	 * Логгер для данного класса.
 	 */
 	@NotNull
-	private static final Logger LOG = Logger.getLogger(Injection.class);
+	private static final Logger LOG = LogManager.getLogger(Injection.class);
 
 	/**
 	 * Конструктор для {@code Injection}.
