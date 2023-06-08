@@ -35,7 +35,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Integer[]}.
 	 */
 	@Test
-	public void testInjectionArrayIntegerType()
+	public void injectionArrayIntegerType()
 	{
 		class Experimental
 		{
@@ -57,7 +57,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Short[]}.
 	 */
 	@Test
-	public void testInjectionArrayShortType()
+	public void injectionArrayShortType()
 	{
 		class Experimental
 		{
@@ -79,7 +79,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Float[]}.
 	 */
 	@Test
-	public void testInjectionArrayFloatType()
+	public void injectionArrayFloatType()
 	{
 		class Experimental
 		{
@@ -101,7 +101,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Double[]}.
 	 */
 	@Test
-	public void testInjectionArrayDoubleType()
+	public void injectionArrayDoubleType()
 	{
 		class Experimental
 		{
@@ -123,7 +123,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Long[]}.
 	 */
 	@Test
-	public void testInjectionArrayLongType()
+	public void injectionArrayLongType()
 	{
 		class Experimental
 		{
@@ -145,7 +145,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code String[]}.
 	 */
 	@Test
-	public void testInjectionArrayStringType()
+	public void injectionArrayStringType()
 	{
 		class Experimental
 		{
@@ -167,7 +167,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Character[]}.
 	 */
 	@Test
-	public void testInjectionArrayCharacterType()
+	public void injectionArrayCharacterType()
 	{
 		class Experimental
 		{
@@ -189,7 +189,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Boolean[]}.
 	 */
 	@Test
-	public void testInjectionArrayBooleanType()
+	public void injectionArrayBooleanType()
 	{
 		class Experimental
 		{
@@ -211,7 +211,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Byte[]}.
 	 */
 	@Test
-	public void testInjectionArrayByteType()
+	public void injectionArrayByteType()
 	{
 		class Experimental
 		{
@@ -233,7 +233,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Array}.
 	 */
 	@Test
-	public void testInjectionArrayTypeNull()
+	public void injectionArrayTypeNull()
 	{
 		class Experimental
 		{
@@ -258,7 +258,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений в {@code Array}.
 	 */
 	@Test
-	public void testInjectionArrayTypeDuplicate()
+	public void injectionArrayTypeDuplicate()
 	{
 		class Experimental
 		{

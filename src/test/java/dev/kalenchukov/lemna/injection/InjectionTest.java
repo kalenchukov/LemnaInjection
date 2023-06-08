@@ -37,7 +37,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с примитивным типом данных.
 	 */
 	@Test
-	public void testInjectionPrimitiveType()
+	public void injectionPrimitiveType()
 	{
 		class Experimental
 		{
@@ -61,7 +61,7 @@ public class InjectionTest
 	 * для которого нет стандартного конвертера.
 	 */
 	@Test
-	public void testInjectionUnknownType()
+	public void injectionUnknownType()
 	{
 		class Experimental
 		{
@@ -83,7 +83,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null}.
 	 */
 	@Test
-	public void testInjectionNull()
+	public void injectionNull()
 	{
 		class Experimental
 		{
@@ -105,7 +105,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} без данных.
 	 */
 	@Test
-	public void testInjectionNotData()
+	public void injectionNotData()
 	{
 		class Experimental
 		{
@@ -126,7 +126,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с нотацией Camel Case.
 	 */
 	@Test
-	public void testInjectionNotationCamelCase()
+	public void injectionNotationCamelCase()
 	{
 		class Experimental
 		{
@@ -149,7 +149,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с нотацией Kebab Case.
 	 */
 	@Test
-	public void testInjectionNotationKebabCase()
+	public void injectionNotationKebabCase()
 	{
 		class Experimental
 		{
@@ -172,7 +172,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с нотацией Upper Case.
 	 */
 	@Test
-	public void testInjectionNotationUpperCase()
+	public void injectionNotationUpperCase()
 	{
 		class Experimental
 		{
@@ -195,7 +195,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с нотацией Snake Case.
 	 */
 	@Test
-	public void testInjectionNotationSnakeCase()
+	public void injectionNotationSnakeCase()
 	{
 		class Experimental
 		{
@@ -218,7 +218,7 @@ public class InjectionTest
 	 * Проверка метода {@link Injection#inject(Map)} с нотацией Pascal Case.
 	 */
 	@Test
-	public void testInjectionNotationPascalCase()
+	public void injectionNotationPascalCase()
 	{
 		class Experimental
 		{

@@ -39,7 +39,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в тип данных {@code Gender}.
 	 */
 	@Test()
-	public void testInjectionSelfType()
+	public void injectionSelfType()
 	{
 		class Experimental
 		{
@@ -62,7 +62,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в тип данных свой тип данных.
 	 */
 	@Test()
-	public void testInjectionSelfTypeArrayFromNull()
+	public void injectionSelfTypeArrayFromNull()
 	{
 		class Experimental
 		{
@@ -88,7 +88,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с использованием неподходящего собственного конвертера типа данных.
 	 */
 	@Test
-	public void testInjectionSelfNegativeConverter()
+	public void injectionSelfNegativeConverter()
 	{
 		class Experimental
 		{
@@ -111,7 +111,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в тип данных {@code Gender[]}.
 	 */
 	@Test
-	public void testInjectionSelfArrayType()
+	public void injectionSelfArrayType()
 	{
 		class Experimental
 		{
@@ -134,7 +134,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Array} из своего типа данных.
 	 */
 	@Test
-	public void testInjectionSelfArrayTypeNull()
+	public void injectionSelfArrayTypeNull()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code Collection}.
 	 */
 	@Test
-	public void testInjectionSelfTypeInCollection()
+	public void injectionSelfTypeInCollection()
 	{
 		class Experimental
 		{
@@ -183,7 +183,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code List}.
 	 */
 	@Test
-	public void testInjectionSelfTypeInList()
+	public void injectionSelfTypeInList()
 	{
 		class Experimental
 		{
@@ -206,7 +206,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code List} из своего типа данных.
 	 */
 	@Test
-	public void testInjectionSelfTypeInListNull()
+	public void injectionSelfTypeInListNull()
 	{
 		class Experimental
 		{
@@ -232,7 +232,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code Set}.
 	 */
 	@Test
-	public void testInjectionSelfTypeInSet()
+	public void injectionSelfTypeInSet()
 	{
 		class Experimental
 		{
@@ -255,7 +255,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений своего типа данных в {@code Set}.
 	 */
 	@Test
-	public void testInjectionSelfTypeInSetFromDuplicate()
+	public void injectionSelfTypeInSetFromDuplicate()
 	{
 		class Experimental
 		{
