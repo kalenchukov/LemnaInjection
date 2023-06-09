@@ -43,13 +43,13 @@ public class InjectionInSetTypeTest
 			public Set<Integer> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("1", "11"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("1", "11"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Integer[]{1, 11}), experimental.variable);
 	}
@@ -65,13 +65,13 @@ public class InjectionInSetTypeTest
 			public Set<Short> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("2", "22"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("2", "22"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Short[]{2, 22}), experimental.variable);
 	}
@@ -87,13 +87,13 @@ public class InjectionInSetTypeTest
 			public Set<Float> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("3.0", "3.30"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("3.0", "3.30"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Float[]{3.0F, 3.30F}), experimental.variable);
 	}
@@ -109,13 +109,13 @@ public class InjectionInSetTypeTest
 			public Set<Double> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("4.59", "59.40"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("4.59", "59.40"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Double[]{4.59, 59.40}), experimental.variable);
 	}
@@ -131,13 +131,13 @@ public class InjectionInSetTypeTest
 			public Set<Long> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("1698756", "345345346"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("1698756", "345345346"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Long[]{1698756L, 345345346L}), experimental.variable);
 	}
@@ -153,13 +153,13 @@ public class InjectionInSetTypeTest
 			public Set<String> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("text", "TEXT"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("text", "TEXT"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new String[] {"text", "TEXT"}), experimental.variable);
 	}
@@ -175,13 +175,13 @@ public class InjectionInSetTypeTest
 			public Set<Character> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("A", "B"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("A", "B"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Character[]{'A', 'B'}), experimental.variable);
 	}
@@ -197,13 +197,13 @@ public class InjectionInSetTypeTest
 			public Set<Boolean> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("true", "false"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("true", "false"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Boolean[]{true, false}), experimental.variable);
 	}
@@ -219,13 +219,13 @@ public class InjectionInSetTypeTest
 			public Set<Byte> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("27", "45"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("27", "45"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Byte[]{27, 45}), experimental.variable);
 	}
@@ -244,14 +244,14 @@ public class InjectionInSetTypeTest
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", values);
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
 		assertThrows(IllegalValueException.class, () -> {
 			Injectable injector = new Injection(experimental);
-			injector.inject(data);
+			injector.inject(value);
 		});
 	}
 
@@ -266,14 +266,14 @@ public class InjectionInSetTypeTest
 			public Set<Integer> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("qwe", "qwe"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("qwe", "qwe"));
 
 		Experimental experimental = new Experimental();
 
 		assertThrows(IllegalValueException.class, () -> {
 			Injectable injector = new Injection(experimental);
-			injector.inject(data);
+			injector.inject(value);
 		});
 	}
 }

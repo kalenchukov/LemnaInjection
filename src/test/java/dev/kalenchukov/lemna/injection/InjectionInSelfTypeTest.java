@@ -47,13 +47,13 @@ public class InjectionInSelfTypeTest
 			public Gender variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("M"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("M"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Gender.M, experimental.variable);
 	}
@@ -73,13 +73,13 @@ public class InjectionInSelfTypeTest
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", values);
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertNull(experimental.variable);
 	}
@@ -96,14 +96,14 @@ public class InjectionInSelfTypeTest
 			public Gender[] variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("M", "F"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		assertThrows(InvalidConverterException.class, () -> {
 			Injectable injector = new Injection(experimental);
-			injector.inject(data);
+			injector.inject(value);
 		});
 	}
 
@@ -119,13 +119,13 @@ public class InjectionInSelfTypeTest
 			public Gender[] variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("M", "F"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertArrayEquals(new Gender[]{Gender.M, Gender.F}, experimental.variable);
 	}
@@ -145,13 +145,13 @@ public class InjectionInSelfTypeTest
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", values);
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertArrayEquals(new Gender[]{null}, experimental.variable);
 	}
@@ -168,13 +168,13 @@ public class InjectionInSelfTypeTest
 			public Collection<Gender> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("M", "F"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.variable);
 	}
@@ -191,13 +191,13 @@ public class InjectionInSelfTypeTest
 			public List<Gender> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("M", "F"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.variable);
 	}
@@ -217,14 +217,14 @@ public class InjectionInSelfTypeTest
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", values);
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", values);
 
 		Experimental experimental = new Experimental();
 
 		assertThrows(IllegalValueException.class, () -> {
 			Injectable injector = new Injection(experimental);
-			injector.inject(data);
+			injector.inject(value);
 		});
 	}
 
@@ -240,13 +240,13 @@ public class InjectionInSelfTypeTest
 			public Set<Gender> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("M", "F"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
-		injector.inject(data);
+		injector.inject(value);
 
 		assertEquals(Set.of(new Gender[]{Gender.M, Gender.F}), experimental.variable);
 	}
@@ -263,14 +263,14 @@ public class InjectionInSelfTypeTest
 			public Set<Gender> variable;
 		}
 
-		Map<String, List<String>> data = new HashMap<>();
-		data.put("variable", List.of("F", "F"));
+		Map<String, List<String>> value = new HashMap<>();
+		value.put("variable", List.of("F", "F"));
 
 		Experimental experimental = new Experimental();
 
 		assertThrows(IllegalValueException.class, () -> {
 			Injectable injector = new Injection(experimental);
-			injector.inject(data);
+			injector.inject(value);
 		});
 	}
 }
