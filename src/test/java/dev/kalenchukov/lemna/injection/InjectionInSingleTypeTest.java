@@ -39,18 +39,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Integer variable;
+			public Integer field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("1"));
+		value.put("field", List.of("1"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Integer.valueOf(1), experimental.variable);
+		assertEquals(1, experimental.field);
 	}
 
 	/**
@@ -61,18 +61,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Short variable;
+			public Short field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("2"));
+		value.put("field", List.of("2"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Short.valueOf((short) 2), experimental.variable);
+		assertEquals(Short.valueOf((short) 2), experimental.field);
 	}
 
 	/**
@@ -83,18 +83,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Float variable;
+			public Float field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("3.0"));
+		value.put("field", List.of("3.0"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Float.valueOf(3.0F), experimental.variable);
+		assertEquals(Float.valueOf(3.0F), experimental.field);
 	}
 
 	/**
@@ -105,18 +105,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Double variable;
+			public Double field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("4.59"));
+		value.put("field", List.of("4.59"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Double.valueOf(4.59), experimental.variable);
+		assertEquals(Double.valueOf(4.59), experimental.field);
 	}
 
 	/**
@@ -127,18 +127,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Long variable;
+			public Long field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("1698756"));
+		value.put("field", List.of("1698756"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Long.valueOf(1698756L), experimental.variable);
+		assertEquals(1698756L, experimental.field);
 	}
 
 	/**
@@ -149,18 +149,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public String variable;
+			public String field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("text"));
+		value.put("field", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals("text", experimental.variable);
+		assertEquals("text", experimental.field);
 	}
 
 	/**
@@ -171,18 +171,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Character variable;
+			public Character field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("A"));
+		value.put("field", List.of("A"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Character.valueOf('A'), experimental.variable);
+		assertEquals('A', experimental.field);
 	}
 
 	/**
@@ -193,18 +193,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Boolean variable;
+			public Boolean field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("true"));
+		value.put("field", List.of("true"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(true, experimental.variable);
+		assertEquals(true, experimental.field);
 	}
 
 	/**
@@ -215,18 +215,18 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Byte variable;
+			public Byte field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("27"));
+		value.put("field", List.of("27"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Byte.valueOf((byte) 27), experimental.variable);
+		assertEquals(Byte.valueOf((byte) 27), experimental.field);
 	}
 
 	/**
@@ -237,20 +237,20 @@ public class InjectionInSingleTypeTest
 	{
 		class Experimental
 		{
-			public Integer variable;
+			public Integer field;
 		}
 
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", values);
+		value.put("field", values);
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.variable);
+		assertNull(experimental.field);
 	}
 }

@@ -44,18 +44,18 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = SingleGenderConverter.class)
-			public Gender variable;
+			public Gender field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("M"));
+		value.put("field", List.of("M"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Gender.M, experimental.variable);
+		assertEquals(Gender.M, experimental.field);
 	}
 
 	/**
@@ -67,21 +67,21 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = SingleGenderConverter.class)
-			public Gender variable;
+			public Gender field;
 		}
 
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", values);
+		value.put("field", values);
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.variable);
+		assertNull(experimental.field);
 	}
 
 	/**
@@ -93,11 +93,11 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = SingleGenderConverter.class)
-			public Gender[] variable;
+			public Gender[] field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("M", "F"));
+		value.put("field", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
@@ -116,18 +116,18 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = ArrayOfGenderConverter.class)
-			public Gender[] variable;
+			public Gender[] field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("M", "F"));
+		value.put("field", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Gender[]{Gender.M, Gender.F}, experimental.variable);
+		assertArrayEquals(new Gender[]{Gender.M, Gender.F}, experimental.field);
 	}
 
 	/**
@@ -139,21 +139,21 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = ArrayOfGenderConverter.class)
-			public Gender[] variable;
+			public Gender[] field;
 		}
 
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", values);
+		value.put("field", values);
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Gender[]{null}, experimental.variable);
+		assertArrayEquals(new Gender[]{null}, experimental.field);
 	}
 
 	/**
@@ -165,18 +165,18 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = CollectionOfGenderConverter.class)
-			public Collection<Gender> variable;
+			public Collection<Gender> field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("M", "F"));
+		value.put("field", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.variable);
+		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.field);
 	}
 
 	/**
@@ -188,18 +188,18 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = ListOfGenderConverter.class)
-			public List<Gender> variable;
+			public List<Gender> field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("M", "F"));
+		value.put("field", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.variable);
+		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.field);
 	}
 
 	/**
@@ -211,14 +211,14 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = ListOfGenderConverter.class)
-			public List<Gender> variable;
+			public List<Gender> field;
 		}
 
 		List<String> values = new ArrayList<>();
 		values.add(null);
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", values);
+		value.put("field", values);
 
 		Experimental experimental = new Experimental();
 
@@ -237,18 +237,18 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = SetOfGenderConverter.class)
-			public Set<Gender> variable;
+			public Set<Gender> field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("M", "F"));
+		value.put("field", List.of("M", "F"));
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Set.of(new Gender[]{Gender.M, Gender.F}), experimental.variable);
+		assertEquals(Set.of(new Gender[]{Gender.M, Gender.F}), experimental.field);
 	}
 
 	/**
@@ -260,11 +260,11 @@ public class InjectionInSelfTypeTest
 		class Experimental
 		{
 			@Converter(converter = SetOfGenderConverter.class)
-			public Set<Gender> variable;
+			public Set<Gender> field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("F", "F"));
+		value.put("field", List.of("F", "F"));
 
 		Experimental experimental = new Experimental();
 

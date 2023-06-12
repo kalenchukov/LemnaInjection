@@ -41,11 +41,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public int variable;
+			public int field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("1"));
+		value.put("field", List.of("1"));
 
 		Experimental experimental = new Experimental();
 
@@ -65,11 +65,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public List<String[]> variable;
+			public List<String[]> field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", List.of("QWE"));
+		value.put("field", List.of("QWE"));
 
 		Experimental experimental = new Experimental();
 
@@ -87,18 +87,18 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String variable;
+			public String field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("variable", null);
+		value.put("field", null);
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.variable);
+		assertNull(experimental.field);
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String variable;
+			public String field;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
@@ -119,7 +119,7 @@ public class InjectionTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.variable);
+		assertNull(experimental.field);
 	}
 
 	/**
@@ -130,11 +130,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String paramValue;
+			public String fieldValue;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("paramValue", List.of("text"));
+		value.put("fieldValue", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -142,7 +142,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.CAMEL_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.paramValue);
+		assertEquals("text", experimental.fieldValue);
 	}
 
 	/**
@@ -153,11 +153,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String paramValue;
+			public String fieldValue;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("param-value", List.of("text"));
+		value.put("field-value", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -165,7 +165,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.KEBAB_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.paramValue);
+		assertEquals("text", experimental.fieldValue);
 	}
 
 	/**
@@ -176,11 +176,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String paramValue;
+			public String fieldValue;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("PARAM_VALUE", List.of("text"));
+		value.put("FIELD_VALUE", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -188,7 +188,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.UPPER_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.paramValue);
+		assertEquals("text", experimental.fieldValue);
 	}
 
 	/**
@@ -199,11 +199,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String paramValue;
+			public String fieldValue;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("param_value", List.of("text"));
+		value.put("field_value", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -211,7 +211,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.SNAKE_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.paramValue);
+		assertEquals("text", experimental.fieldValue);
 	}
 
 	/**
@@ -222,11 +222,11 @@ public class InjectionTest
 	{
 		class Experimental
 		{
-			public String paramValue;
+			public String fieldValue;
 		}
 
 		Map<String, List<String>> value = new HashMap<>();
-		value.put("ParamValue", List.of("text"));
+		value.put("FieldValue", List.of("text"));
 
 		Experimental experimental = new Experimental();
 
@@ -234,6 +234,6 @@ public class InjectionTest
 		injector.setNotationType(NotationType.PASCAL_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.paramValue);
+		assertEquals("text", experimental.fieldValue);
 	}
 }
