@@ -24,7 +24,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link Injection}.
@@ -49,7 +50,7 @@ public class InjectionTest
 
 		Experimental experimental = new Experimental();
 
-		assertThrows(UnknownConverterException.class, () -> {
+		assertThatExceptionOfType(UnknownConverterException.class).isThrownBy(() -> {
 			Injectable injector = new Injection(experimental);
 			injector.inject(value);
 		});
@@ -73,7 +74,7 @@ public class InjectionTest
 
 		Experimental experimental = new Experimental();
 
-		assertThrows(UnknownConverterException.class, () -> {
+		assertThatExceptionOfType(UnknownConverterException.class).isThrownBy(() -> {
 			Injectable injector = new Injection(experimental);
 			injector.inject(value);
 		});
@@ -98,7 +99,7 @@ public class InjectionTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.field);
+		assertThat(experimental.field).isNull();
 	}
 
 	/**
@@ -119,7 +120,7 @@ public class InjectionTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.field);
+		assertThat(experimental.field).isNull();
 	}
 
 	/**
@@ -142,7 +143,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.CAMEL_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.fieldValue);
+		assertThat(experimental.fieldValue).isEqualTo("text");
 	}
 
 	/**
@@ -165,7 +166,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.KEBAB_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.fieldValue);
+		assertThat(experimental.fieldValue).isEqualTo("text");
 	}
 
 	/**
@@ -188,7 +189,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.UPPER_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.fieldValue);
+		assertThat(experimental.fieldValue).isEqualTo("text");
 	}
 
 	/**
@@ -211,7 +212,7 @@ public class InjectionTest
 		injector.setNotationType(NotationType.SNAKE_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.fieldValue);
+		assertThat(experimental.fieldValue).isEqualTo("text");
 	}
 
 	/**
@@ -234,6 +235,6 @@ public class InjectionTest
 		injector.setNotationType(NotationType.PASCAL_CASE);
 		injector.inject(value);
 
-		assertEquals("text", experimental.fieldValue);
+		assertThat(experimental.fieldValue).isEqualTo("text");
 	}
 }

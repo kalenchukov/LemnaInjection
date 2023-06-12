@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link Injection} с объектами типа {@code Array}.
@@ -50,7 +50,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Integer[]{1, 11}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Integer[]{1, 11});
 	}
 	
 	/**
@@ -72,7 +72,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Short[]{2, 22}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Short[]{2, 22});
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Float[]{3.0F, 3.30F}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Float[]{3.0F, 3.30F});
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Double[]{4.59, 59.40}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Double[]{4.59, 59.40});
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Long[]{1698756L, 345345346L}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Long[]{1698756L, 345345346L});
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new String[] {"text", "TEXT"}, experimental.field);
+		assertThat(experimental.field).containsSequence(new String[] {"text", "TEXT"});
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Character[]{'A', 'B'}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Character[]{'A', 'B'});
 	}
 
 	/**
@@ -204,7 +204,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Boolean[]{true, false}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Boolean[]{true, false});
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Byte[]{27, 45}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Byte[]{27, 45});
 	}
 
 	/**
@@ -251,7 +251,7 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Integer[]{null}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Integer[]{null});
 	}
 
 	/**
@@ -273,6 +273,6 @@ public class InjectionInArrayTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Integer[]{10, 10}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Integer[]{10, 10});
 	}
 }

@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link Injection} со стандартными одиночными типами объектов.
@@ -50,7 +50,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(1, experimental.field);
+		assertThat(experimental.field).isEqualTo(1);
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Short.valueOf((short) 2), experimental.field);
+		assertThat(experimental.field).isEqualTo(Short.valueOf((short) 2));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Float.valueOf(3.0F), experimental.field);
+		assertThat(experimental.field).isEqualTo(Float.valueOf(3.0F));
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Double.valueOf(4.59), experimental.field);
+		assertThat(experimental.field).isEqualTo(Double.valueOf(4.59));
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(1698756L, experimental.field);
+		assertThat(experimental.field).isEqualTo(1698756L);
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals("text", experimental.field);
+		assertThat(experimental.field).isEqualTo("text");
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals('A', experimental.field);
+		assertThat(experimental.field).isEqualTo('A');
 	}
 
 	/**
@@ -204,7 +204,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(true, experimental.field);
+		assertThat(experimental.field).isEqualTo(true);
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Byte.valueOf((byte) 27), experimental.field);
+		assertThat(experimental.field).isEqualTo(Byte.valueOf((byte) 27));
 	}
 
 	/**
@@ -251,6 +251,6 @@ public class InjectionInSingleTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.field);
+		assertThat(experimental.field).isNull();
 	}
 }

@@ -26,7 +26,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link Injection} с объектами собственного типа.
@@ -55,7 +56,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Gender.M, experimental.field);
+		assertThat(experimental.field).isEqualTo(Gender.M);
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertNull(experimental.field);
+		assertThat(experimental.field).isNull();
 	}
 
 	/**
@@ -101,7 +102,7 @@ public class InjectionInSelfTypeTest
 
 		Experimental experimental = new Experimental();
 
-		assertThrows(InvalidConverterException.class, () -> {
+		assertThatExceptionOfType(InvalidConverterException.class).isThrownBy(() -> {
 			Injectable injector = new Injection(experimental);
 			injector.inject(value);
 		});
@@ -127,7 +128,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Gender[]{Gender.M, Gender.F}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Gender[]{Gender.M, Gender.F});
 	}
 
 	/**
@@ -153,7 +154,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertArrayEquals(new Gender[]{null}, experimental.field);
+		assertThat(experimental.field).containsSequence(new Gender[]{null});
 	}
 
 	/**
@@ -176,7 +177,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Gender[]{Gender.M, Gender.F}));
 	}
 
 	/**
@@ -199,7 +200,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Gender[]{Gender.M, Gender.F}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Gender[]{Gender.M, Gender.F}));
 	}
 
 	/**
@@ -222,7 +223,7 @@ public class InjectionInSelfTypeTest
 
 		Experimental experimental = new Experimental();
 
-		assertThrows(IllegalValueException.class, () -> {
+		assertThatExceptionOfType(IllegalValueException.class).isThrownBy(() -> {
 			Injectable injector = new Injection(experimental);
 			injector.inject(value);
 		});
@@ -248,7 +249,7 @@ public class InjectionInSelfTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(Set.of(new Gender[]{Gender.M, Gender.F}), experimental.field);
+		assertThat(experimental.field).isEqualTo(Set.of(new Gender[]{Gender.M, Gender.F}));
 	}
 
 	/**
@@ -268,7 +269,7 @@ public class InjectionInSelfTypeTest
 
 		Experimental experimental = new Experimental();
 
-		assertThrows(IllegalValueException.class, () -> {
+		assertThatExceptionOfType(IllegalValueException.class).isThrownBy(() -> {
 			Injectable injector = new Injection(experimental);
 			injector.inject(value);
 		});

@@ -23,7 +23,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link Injection} с объектами типа {@code Collection}.
@@ -51,7 +52,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Integer[]{1, 11}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Integer[]{1, 11}));
 	}
 	
 	/**
@@ -73,7 +74,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Short[]{2, 22}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Short[]{2, 22}));
 	}
 	
 	/**
@@ -95,7 +96,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Float[]{3.0F, 3.30F}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Float[]{3.0F, 3.30F}));
 	}
 	
 	/**
@@ -117,7 +118,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Double[]{4.59, 59.40}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Double[]{4.59, 59.40}));
 	}
 	
 	/**
@@ -139,7 +140,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Long[]{1698756L, 345345346L}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Long[]{1698756L, 345345346L}));
 	}
 	
 	/**
@@ -161,7 +162,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new String[] {"text", "TEXT"}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new String[] {"text", "TEXT"}));
 	}
 	
 	/**
@@ -183,7 +184,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Character[]{'A', 'B'}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Character[]{'A', 'B'}));
 	}
 	
 	/**
@@ -205,7 +206,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Boolean[]{true, false}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Boolean[]{true, false}));
 	}
 	
 	/**
@@ -227,7 +228,7 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Byte[]{27, 45}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Byte[]{27, 45}));
 	}
 
 	/**
@@ -249,7 +250,7 @@ public class InjectionInCollectionTypeTest
 
 		Experimental experimental = new Experimental();
 
-		assertThrows(IllegalValueException.class, () -> {
+		assertThatExceptionOfType(IllegalValueException.class).isThrownBy(() -> {
 			Injectable injector = new Injection(experimental);
 			injector.inject(value);
 		});
@@ -274,6 +275,6 @@ public class InjectionInCollectionTypeTest
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertEquals(List.of(new Integer[]{10, 10}), experimental.field);
+		assertThat(experimental.field).isEqualTo(List.of(new Integer[]{10, 10}));
 	}
 }
