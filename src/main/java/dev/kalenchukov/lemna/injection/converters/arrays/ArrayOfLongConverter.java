@@ -40,8 +40,8 @@ public final class ArrayOfLongConverter implements Converting<Long[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Long @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

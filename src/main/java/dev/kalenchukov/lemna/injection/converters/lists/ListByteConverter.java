@@ -42,8 +42,8 @@ public final class ListByteConverter implements Converting<List<Byte>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public List<@NotNull Byte> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

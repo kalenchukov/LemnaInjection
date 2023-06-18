@@ -43,8 +43,8 @@ public final class SetDoubleConverter implements Converting<Set<Double>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Double> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

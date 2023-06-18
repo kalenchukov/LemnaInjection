@@ -40,8 +40,8 @@ public final class ArrayOfShortConverter implements Converting<Short[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Short @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

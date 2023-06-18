@@ -40,8 +40,8 @@ public final class ArrayOfIntegerConverter implements Converting<Integer[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Integer @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

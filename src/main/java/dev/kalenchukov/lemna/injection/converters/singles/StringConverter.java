@@ -38,8 +38,8 @@ public final class StringConverter implements Converting<String>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public String convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

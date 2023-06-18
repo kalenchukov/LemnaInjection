@@ -43,8 +43,8 @@ public final class CollectionStringConverter implements Converting<Collection<St
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Collection<@NotNull String> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

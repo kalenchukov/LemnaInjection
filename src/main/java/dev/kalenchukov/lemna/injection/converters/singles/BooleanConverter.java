@@ -38,8 +38,8 @@ public final class BooleanConverter implements Converting<Boolean>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Boolean convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

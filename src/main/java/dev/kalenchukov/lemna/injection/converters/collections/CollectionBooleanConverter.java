@@ -41,8 +41,8 @@ public final class CollectionBooleanConverter implements Converting<Collection<B
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Collection<@NotNull Boolean> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

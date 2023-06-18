@@ -38,8 +38,8 @@ public final class LongConverter implements Converting<Long>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Long convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

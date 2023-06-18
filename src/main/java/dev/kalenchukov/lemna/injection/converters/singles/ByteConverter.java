@@ -38,8 +38,8 @@ public final class ByteConverter implements Converting<Byte>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Byte convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

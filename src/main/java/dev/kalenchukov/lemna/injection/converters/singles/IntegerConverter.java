@@ -38,8 +38,8 @@ public final class IntegerConverter implements Converting<Integer>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Integer convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

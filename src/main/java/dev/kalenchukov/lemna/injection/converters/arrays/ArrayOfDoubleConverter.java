@@ -40,8 +40,8 @@ public final class ArrayOfDoubleConverter implements Converting<Double[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Double @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

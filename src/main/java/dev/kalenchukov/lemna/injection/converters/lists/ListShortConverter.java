@@ -42,8 +42,8 @@ public final class ListShortConverter implements Converting<List<Short>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public List<@NotNull Short> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

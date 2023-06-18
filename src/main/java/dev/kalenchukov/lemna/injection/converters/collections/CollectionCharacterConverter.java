@@ -41,8 +41,8 @@ public final class CollectionCharacterConverter implements Converting<Collection
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Collection<@NotNull Character> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

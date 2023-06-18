@@ -40,8 +40,8 @@ public final class ArrayOfBooleanConverter implements Converting<Boolean[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Boolean @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

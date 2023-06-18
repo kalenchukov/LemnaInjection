@@ -43,8 +43,8 @@ public final class SetLongConverter implements Converting<Set<Long>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Long> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

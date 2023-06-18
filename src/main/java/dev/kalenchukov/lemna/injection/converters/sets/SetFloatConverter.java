@@ -43,8 +43,8 @@ public final class SetFloatConverter implements Converting<Set<Float>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Float> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

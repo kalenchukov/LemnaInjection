@@ -43,8 +43,8 @@ public final class SetCharacterConverter implements Converting<Set<Character>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Character> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

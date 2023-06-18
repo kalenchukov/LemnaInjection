@@ -42,8 +42,8 @@ public final class ListDoubleConverter implements Converting<List<Double>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public List<@NotNull Double> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

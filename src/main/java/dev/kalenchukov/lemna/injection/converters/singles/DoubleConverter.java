@@ -38,8 +38,8 @@ public final class DoubleConverter implements Converting<Double>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Double convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

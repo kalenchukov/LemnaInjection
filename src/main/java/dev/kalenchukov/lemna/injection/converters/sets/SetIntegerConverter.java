@@ -41,8 +41,8 @@ public final class SetIntegerConverter implements Converting<Set<Integer>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Integer> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

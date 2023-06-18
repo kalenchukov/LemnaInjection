@@ -40,8 +40,8 @@ public final class ArrayOfCharacterConverter implements Converting<Character[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Character @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

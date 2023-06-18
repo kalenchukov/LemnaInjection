@@ -41,8 +41,8 @@ public final class CollectionByteConverter implements Converting<Collection<Byte
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Collection<@NotNull Byte> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

@@ -40,8 +40,8 @@ public final class ArrayOfFloatConverter implements Converting<Float[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Float @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

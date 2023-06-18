@@ -40,8 +40,8 @@ public final class ArrayOfByteConverter implements Converting<Byte[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Byte @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

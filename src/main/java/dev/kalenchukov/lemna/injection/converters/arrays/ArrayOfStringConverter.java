@@ -40,8 +40,8 @@ public final class ArrayOfStringConverter implements Converting<String[]>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public String @Nullable [] convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

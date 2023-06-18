@@ -38,8 +38,8 @@ public final class FloatConverter implements Converting<Float>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Float convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

@@ -42,8 +42,8 @@ public final class ListStringConverter implements Converting<List<String>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public List<@NotNull String> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

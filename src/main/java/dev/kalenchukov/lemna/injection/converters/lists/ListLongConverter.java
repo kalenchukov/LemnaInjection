@@ -42,8 +42,8 @@ public final class ListLongConverter implements Converting<List<Long>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public List<@NotNull Long> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

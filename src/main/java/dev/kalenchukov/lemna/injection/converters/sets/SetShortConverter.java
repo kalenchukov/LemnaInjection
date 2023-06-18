@@ -43,8 +43,8 @@ public final class SetShortConverter implements Converting<Set<Short>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Short> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

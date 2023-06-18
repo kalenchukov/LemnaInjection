@@ -42,8 +42,8 @@ public final class ListBooleanConverter implements Converting<List<Boolean>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public List<@NotNull Boolean> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

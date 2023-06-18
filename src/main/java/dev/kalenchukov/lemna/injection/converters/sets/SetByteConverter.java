@@ -43,8 +43,8 @@ public final class SetByteConverter implements Converting<Set<Byte>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull Byte> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

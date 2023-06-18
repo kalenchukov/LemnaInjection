@@ -41,8 +41,8 @@ public final class CollectionLongConverter implements Converting<Collection<Long
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Collection<@NotNull Long> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

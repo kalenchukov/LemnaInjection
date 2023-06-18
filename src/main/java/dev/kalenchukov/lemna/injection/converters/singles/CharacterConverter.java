@@ -38,8 +38,8 @@ public final class CharacterConverter implements Converting<Character>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Character convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

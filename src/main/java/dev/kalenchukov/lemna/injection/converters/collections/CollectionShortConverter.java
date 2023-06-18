@@ -41,8 +41,8 @@ public final class CollectionShortConverter implements Converting<Collection<Sho
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Collection<@NotNull Short> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{

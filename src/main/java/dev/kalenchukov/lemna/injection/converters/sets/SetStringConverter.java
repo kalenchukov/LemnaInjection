@@ -43,8 +43,8 @@ public final class SetStringConverter implements Converting<Set<String>>
 	 * @return {@inheritDoc}
 	 * @throws UnableConverterException {@inheritDoc}
 	 */
-	@Override
 	@Nullable
+	@Override
 	public Set<@NotNull String> convert(@Nullable final List<@Nullable String> value)
 		throws UnableConverterException
 	{
