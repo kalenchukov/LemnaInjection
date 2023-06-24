@@ -36,7 +36,7 @@ public interface Converting<T>
 	 *
 	 * @param value значения, тип данных которых необходимо конвертировать.
 	 * @return возвращает значение конвертированное в указанный тип данных.
-	 * @throws UnableConverterException если конвертировать значение в нужный тип данных не удалось.
+	 * @throws UnableConverterException если конвертировать {@code value} в нужный тип данных не удалось.
 	 */
 	@Nullable
 	T convert(@Nullable List<@Nullable String> value)

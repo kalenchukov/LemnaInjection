@@ -238,8 +238,8 @@ public class Injection implements Injectable
 	 *
 	 * @param field поле класса в которое необходимо внедрить значение.
 	 * @param value коллекция значений которые необходимо внедрить в поле класса.
-	 * @throws IllegalValueException если передано некорректное значение для внедрения в данное поле класса.
-	 * @throws UnknownConverterException если для типа поля не реализован персональный конвертер.
+	 * @throws IllegalValueException если передано некорректное {@code value} для внедрения в данное поле класса.
+	 * @throws UnknownConverterException если для типа {@code field} не реализован персональный конвертер.
 	 * @throws InvalidConverterException если конвертер некорректный.
 	 */
 	private void injectValueField(@NotNull final Field field, @Nullable final List<@Nullable String> value)
