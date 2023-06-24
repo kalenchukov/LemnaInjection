@@ -26,10 +26,10 @@ import java.util.List;
 /**
  * Интерфейс для реализации собственного класса конвертера типа значений.
  *
- * @param <T> Объект типа возвращаемых данных.
+ * @param <V> тип возвращаемых данных.
  * @author Алексей Каленчуков
  */
-public interface Converting<T>
+public interface Converting<V>
 {
 	/**
 	 * Конвертирует значение в указанный тип данных.
@@ -39,6 +39,5 @@ public interface Converting<T>
 	 * @throws UnableConverterException если конвертировать {@code value} в нужный тип данных не удалось.
 	 */
 	@Nullable
-	T convert(@Nullable List<@Nullable String> value)
-		throws UnableConverterException;
+	V convert(@Nullable List<@Nullable String> value) throws UnableConverterException;
 }
