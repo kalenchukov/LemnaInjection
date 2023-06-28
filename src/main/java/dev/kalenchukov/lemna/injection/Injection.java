@@ -89,6 +89,7 @@ public class Injection implements Injectable
 	 * Конструктор для {@code Injection}.
 	 *
 	 * @param object объект класса в который необходимо внедрить данные.
+	 * @throws NullPointerException если в качестве {@code object} передан {@code null}.
 	 */
 	public Injection(@NotNull final Object object)
 	{
@@ -116,6 +117,7 @@ public class Injection implements Injectable
 	 * {@inheritDoc}
 	 *
 	 * @param locale {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	@Override
 	public void setLocale(@NotNull final Locale locale)
@@ -154,6 +156,7 @@ public class Injection implements Injectable
 	 * {@inheritDoc}
 	 *
 	 * @param notationType {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code notationType} передан {@code null}.
 	 */
 	@Override
 	public void setNotationType(@NotNull final NotationType notationType)
@@ -179,6 +182,7 @@ public class Injection implements Injectable
 	 * {@inheritDoc}
 	 *
 	 * @param data {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code data} передан {@code null}.
 	 * @throws IllegalValueException {@inheritDoc}
 	 * @throws UnknownConverterException {@inheritDoc}
 	 * @throws InvalidConverterException {@inheritDoc}
@@ -238,6 +242,8 @@ public class Injection implements Injectable
 	 *
 	 * @param field поле класса в которое необходимо внедрить значение.
 	 * @param value коллекция значений которые необходимо внедрить в поле класса.
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code value} передан {@code null}.
 	 * @throws IllegalValueException если передано некорректное {@code value} для внедрения в данное поле класса.
 	 * @throws UnknownConverterException если для типа {@code field} не реализован персональный конвертер.
 	 * @throws InvalidConverterException если конвертер некорректный.

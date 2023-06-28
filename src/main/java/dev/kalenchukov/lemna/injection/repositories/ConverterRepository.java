@@ -84,6 +84,7 @@ public final class ConverterRepository
 	 * Добавляет коллекцию конвертеров типов данных.
 	 *
 	 * @param converters коллекция конвертеров типов данных.
+	 * @throws NullPointerException если в качестве {@code converters} передан {@code null}.
 	 */
 	public void addConverters(@NotNull Map<@NotNull String, @NotNull Class<? extends Converting<?>>> converters)
 	{
@@ -97,6 +98,8 @@ public final class ConverterRepository
 	 *
 	 * @param forType тип данных для которого используется конвертер.
 	 * @param converter класс конвертера типа данных.
+	 * @throws NullPointerException если в качестве {@code forType} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code converter} передан {@code null}.
 	 */
 	public void addConverter(@NotNull final String forType,
 							 @NotNull final Class<? extends Converting<?>> converter)
