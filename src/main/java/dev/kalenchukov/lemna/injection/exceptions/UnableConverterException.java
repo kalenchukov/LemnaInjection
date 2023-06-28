@@ -18,9 +18,7 @@
 
 package dev.kalenchukov.lemna.injection.exceptions;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Исключение для невозможности конвертирования значения внедрения.
@@ -39,8 +37,8 @@ public class UnableConverterException extends RuntimeException
      *
      * @param message сообщение.
      */
-    public UnableConverterException(@NotNull final String message)
+    public UnableConverterException(@Nullable final String message)
     {
-		super(Objects.requireNonNull(message));
+		super(message);
     }
 }

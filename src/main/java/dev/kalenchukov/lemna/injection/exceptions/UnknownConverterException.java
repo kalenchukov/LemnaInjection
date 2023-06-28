@@ -18,9 +18,7 @@
 
 package dev.kalenchukov.lemna.injection.exceptions;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Исключение для неопределённого конвертера для значения внедрения.
@@ -34,8 +32,8 @@ public class UnknownConverterException extends RuntimeException
      *
      * @param message сообщение.
      */
-    public UnknownConverterException(@NotNull final String message)
+    public UnknownConverterException(@Nullable final String message)
     {
-        super(Objects.requireNonNull(message));
+        super(message);
     }
 }
