@@ -24,7 +24,7 @@ import dev.kalenchukov.lemna.injection.exceptions.IllegalValueException;
 import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
 import dev.kalenchukov.lemna.injection.interfaces.Converting;
-import dev.kalenchukov.notation.Notation;
+import dev.kalenchukov.notation.Notations;
 import dev.kalenchukov.notation.resources.NotationType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -203,7 +203,7 @@ public class Injection implements Injectable
 			for (Field field : this.object.getClass().getDeclaredFields())
 			{
 				final List<String> value = data.get(
-					Notation.to(field.getName(), this.notationType)
+					Notations.to(field.getName(), this.notationType)
 				);
 
 				if (value == null)
