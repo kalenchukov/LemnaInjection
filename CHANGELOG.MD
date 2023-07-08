@@ -1,13 +1,11 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
-* Добавлен модуль assertj-core версии 3.24.2.
+*
 
 ### Изменено
-* Изменена версия требуемого модуля log4j-core до 2.20.0.
-* Изменена версия требуемого модуля annotations до 24.0.1.
 * Изменена версия Java на 17.
-* Изменена версия требуемого модуля notation до 1.6.0.
+*
 
 ### Исправлено
 *
@@ -26,7 +24,7 @@
 * Выставлена печать логов уровня INFO.
 * Изменён тип параметра метода Injectable.inject(Map<String, List<String>>).
 * Обновлён README.MD.
-* Изменена версия требуемого модуля notation до 1.5.0.
+*
 
 ## v1.2.0 - 16.10.2022
 ### Добавлено
@@ -41,7 +39,6 @@
 * Добавлен плагин maven-source в pom.xml.
 
 ### Изменено
-* Изменена версия требуемого модуля notation-converting.
 * Переименован метод ConverterRepository.addConverters() -> ConverterRepository.addConvertersSimple().
 * Класс ConverterRepository перемещён в пакет repositories.
 
