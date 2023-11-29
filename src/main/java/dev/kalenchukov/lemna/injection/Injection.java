@@ -25,7 +25,7 @@ import dev.kalenchukov.lemna.injection.exceptions.InvalidConverterException;
 import dev.kalenchukov.lemna.injection.exceptions.UnknownConverterException;
 import dev.kalenchukov.lemna.injection.interfaces.Converting;
 import dev.kalenchukov.notation.Notations;
-import dev.kalenchukov.notation.resources.NotationType;
+import dev.kalenchukov.notation.types.NotationType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
