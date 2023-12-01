@@ -38,19 +38,19 @@ Set<Character>, Set<Boolean>, Set<Byte>
 ```java
 public class Experimental
 {
-    private String varOne;
-    
-    private Integer varTwo;
-    
-    public String getVarOne()
-    {
-        return this.varOne;
-    }
+	private String varOne;
 
-    public Integer getVarTwo()
-    {
-        return this.varTwo;
-    }
+	private Integer varTwo;
+
+	public String getVarOne()
+	{
+		return this.varOne;
+	}
+
+	public Integer getVarTwo()
+	{
+		return this.varTwo;
+	}
 }
 ```
 
@@ -87,8 +87,8 @@ experimental.getVarTwo();
 ```java
 public enum Gender
 {
-    M,
-    F;
+	M,
+	F;
 }
 ```
 
@@ -105,16 +105,16 @@ public final class GenderConverter implements Converting<Gender>
 	public Gender convert(@Nullable List<@Nullable String> value) throws UnableConverterException
 	{
 		if (value == null || value.get(0) == null) {
-		    return null;
+			return null;
 		}
 
 		try
 		{
-		    return Gender.valueOf(value.get(0));
+			return Gender.valueOf(value.get(0));
 		}
 		catch (IllegalArgumentException exception)
 		{
-		    throw new UnableConverterException();
+			throw new UnableConverterException();
 		}
 	}
 }

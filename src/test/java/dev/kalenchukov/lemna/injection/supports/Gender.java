@@ -20,6 +20,7 @@ package dev.kalenchukov.lemna.injection.supports;
 
 public enum Gender
 {
-    M,
-    F;
+	M,
+
+	F;
 }

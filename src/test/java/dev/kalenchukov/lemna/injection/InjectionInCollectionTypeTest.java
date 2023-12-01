@@ -37,7 +37,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Integer>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromInteger()
+	public void injectWithCollectionTypeFromInteger()
 	{
 		class Experimental
 		{
@@ -54,12 +54,12 @@ public class InjectionInCollectionTypeTest
 
 		assertThat(experimental.field).isEqualTo(List.of(new Integer[]{1, 11}));
 	}
-	
+
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Short>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromShort()
+	public void injectWithCollectionTypeFromShort()
 	{
 		class Experimental
 		{
@@ -81,7 +81,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Float>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromFloat()
+	public void injectWithCollectionTypeFromFloat()
 	{
 		class Experimental
 		{
@@ -98,12 +98,12 @@ public class InjectionInCollectionTypeTest
 
 		assertThat(experimental.field).isEqualTo(List.of(new Float[]{3.0F, 3.30F}));
 	}
-	
+
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Double>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromDouble()
+	public void injectWithCollectionTypeFromDouble()
 	{
 		class Experimental
 		{
@@ -125,7 +125,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Long>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromLong()
+	public void injectWithCollectionTypeFromLong()
 	{
 		class Experimental
 		{
@@ -147,7 +147,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<String>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromString()
+	public void injectWithCollectionTypeFromString()
 	{
 		class Experimental
 		{
@@ -169,7 +169,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Character>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromCharacter()
+	public void injectWithCollectionTypeFromCharacter()
 	{
 		class Experimental
 		{
@@ -191,7 +191,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Boolean>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromBoolean()
+	public void injectWithCollectionTypeFromBoolean()
 	{
 		class Experimental
 		{
@@ -213,7 +213,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Collection<Byte>}.
 	 */
 	@Test
-	public void injectionCollectionTypeFromByte()
+	public void injectWithCollectionTypeFromByte()
 	{
 		class Experimental
 		{
@@ -235,7 +235,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Collection}.
 	 */
 	@Test
-	public void injectionCollectionTypeNull()
+	public void injectWithCollectionTypeNull()
 	{
 		class Experimental
 		{
@@ -260,7 +260,7 @@ public class InjectionInCollectionTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений в {@code Collection}.
 	 */
 	@Test
-	public void injectionCollectionTypeDuplicate()
+	public void injectWithCollectionTypeDuplicate()
 	{
 		class Experimental
 		{

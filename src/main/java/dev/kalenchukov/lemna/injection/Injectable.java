@@ -79,5 +79,5 @@ public interface Injectable
 	 * @throws InvalidConverterException если конвертер некорректный.
 	 */
 	void inject(@NotNull Map<@NotNull String, @Nullable List<@Nullable String>> data)
-        throws IllegalValueException, UnknownConverterException, InvalidConverterException;
+		throws IllegalValueException, UnknownConverterException, InvalidConverterException;
 }

@@ -40,7 +40,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в тип данных {@code Gender}.
 	 */
 	@Test()
-	public void injectionSelfType()
+	public void injectWithSelfType()
 	{
 		class Experimental
 		{
@@ -63,7 +63,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в тип данных свой тип данных.
 	 */
 	@Test()
-	public void injectionSelfTypeArrayFromNull()
+	public void injectWithSelfTypeArrayFromNull()
 	{
 		class Experimental
 		{
@@ -89,7 +89,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с использованием неподходящего собственного конвертера типа данных.
 	 */
 	@Test
-	public void injectionSelfNegativeConverter()
+	public void injectWithSelfNegativeConverter()
 	{
 		class Experimental
 		{
@@ -112,7 +112,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в тип данных {@code Gender[]}.
 	 */
 	@Test
-	public void injectionSelfArrayType()
+	public void injectWithSelfArrayType()
 	{
 		class Experimental
 		{
@@ -122,20 +122,21 @@ public class InjectionInSelfTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("M", "F"));
+		Gender[] expected = new Gender[] {Gender.M, Gender.F};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Gender[]{Gender.M, Gender.F});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Array} из своего типа данных.
 	 */
 	@Test
-	public void injectionSelfArrayTypeNull()
+	public void injectWithSelfArrayTypeNull()
 	{
 		class Experimental
 		{
@@ -148,20 +149,21 @@ public class InjectionInSelfTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", values);
+		Gender[] expected = new Gender[] {null};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Gender[]{null});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code Collection}.
 	 */
 	@Test
-	public void injectionSelfTypeInCollection()
+	public void injectWithSelfTypeInCollection()
 	{
 		class Experimental
 		{
@@ -184,7 +186,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code List}.
 	 */
 	@Test
-	public void injectionSelfTypeInList()
+	public void injectWithSelfTypeInList()
 	{
 		class Experimental
 		{
@@ -207,7 +209,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code List} из своего типа данных.
 	 */
 	@Test
-	public void injectionSelfTypeInListNull()
+	public void injectWithSelfTypeInListNull()
 	{
 		class Experimental
 		{
@@ -233,7 +235,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением своего типа данных в {@code Set}.
 	 */
 	@Test
-	public void injectionSelfTypeInSet()
+	public void injectWithSelfTypeInSet()
 	{
 		class Experimental
 		{
@@ -256,7 +258,7 @@ public class InjectionInSelfTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений своего типа данных в {@code Set}.
 	 */
 	@Test
-	public void injectionSelfTypeInSetFromDuplicate()
+	public void injectWithSelfTypeInSetFromDuplicate()
 	{
 		class Experimental
 		{

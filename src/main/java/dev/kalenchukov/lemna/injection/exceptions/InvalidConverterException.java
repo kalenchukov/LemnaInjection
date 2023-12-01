@@ -28,12 +28,12 @@ import org.jetbrains.annotations.Nullable;
 public class InvalidConverterException extends RuntimeException
 {
 	/**
-     * Конструктор для {@code InvalidConverterException}.
-     *
-     * @param message сообщение.
-     */
-    public InvalidConverterException(@Nullable final String message)
-    {
+	 * Конструктор для {@code InvalidConverterException}.
+	 *
+	 * @param message сообщение.
+	 */
+	public InvalidConverterException(@Nullable final String message)
+	{
 		super(message);
-    }
+	}
 }

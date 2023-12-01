@@ -28,12 +28,12 @@ import org.jetbrains.annotations.Nullable;
 public class UnknownConverterException extends RuntimeException
 {
 	/**
-     * Конструктор для {@code UnknownConverterException}.
-     *
-     * @param message сообщение.
-     */
-    public UnknownConverterException(@Nullable final String message)
-    {
-        super(message);
-    }
+	 * Конструктор для {@code UnknownConverterException}.
+	 *
+	 * @param message сообщение.
+	 */
+	public UnknownConverterException(@Nullable final String message)
+	{
+		super(message);
+	}
 }

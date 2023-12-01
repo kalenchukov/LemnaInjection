@@ -26,23 +26,23 @@ import java.util.List;
 
 public class SingleGenderConverter implements Converting<Gender>
 {
-    @Nullable
-    @Override
-    public Gender convert(@Nullable List<@Nullable String> value)
+	@Nullable
+	@Override
+	public Gender convert(@Nullable List<@Nullable String> value)
 		throws UnableConverterException
-    {
-        if (value == null || value.get(0) == null) {
-            return null;
-        }
+	{
+		if (value == null || value.get(0) == null) {
+			return null;
+		}
 
-        try
-        {
-            return Gender.valueOf(value.get(0));
-        }
-        catch (IllegalArgumentException exception)
-        {
-            throw new UnableConverterException();
-        }
+		try
+		{
+			return Gender.valueOf(value.get(0));
+		}
+		catch (IllegalArgumentException exception)
+		{
+			throw new UnableConverterException();
+		}
 
-    }
+	}
 }

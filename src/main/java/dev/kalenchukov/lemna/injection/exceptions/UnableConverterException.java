@@ -32,13 +32,13 @@ public class UnableConverterException extends RuntimeException
 	 */
 	public UnableConverterException() {}
 
-    /**
-     * Конструктор для {@code UnableConverterException}.
-     *
-     * @param message сообщение.
-     */
-    public UnableConverterException(@Nullable final String message)
-    {
+	/**
+	 * Конструктор для {@code UnableConverterException}.
+	 *
+	 * @param message сообщение.
+	 */
+	public UnableConverterException(@Nullable final String message)
+	{
 		super(message);
-    }
+	}
 }

@@ -27,13 +27,13 @@ import org.jetbrains.annotations.Nullable;
  */
 public class IllegalValueException extends RuntimeException
 {
-    /**
-     * Конструктор для {@code IllegalValueException}.
-     *
-     * @param message сообщение.
-     */
-    public IllegalValueException(@Nullable final String message)
-    {
+	/**
+	 * Конструктор для {@code IllegalValueException}.
+	 *
+	 * @param message сообщение.
+	 */
+	public IllegalValueException(@Nullable final String message)
+	{
 		super(message);
-    }
+	}
 }

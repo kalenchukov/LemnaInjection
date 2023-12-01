@@ -37,7 +37,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Integer>}.
 	 */
 	@Test
-	public void injectionListTypeFromInteger()
+	public void injectWithListTypeFromInteger()
 	{
 		class Experimental
 		{
@@ -59,7 +59,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Short>}.
 	 */
 	@Test
-	public void injectionListTypeFromShort()
+	public void injectWithListTypeFromShort()
 	{
 		class Experimental
 		{
@@ -81,7 +81,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Float>}.
 	 */
 	@Test
-	public void injectionListTypeFromFloat()
+	public void injectWithListTypeFromFloat()
 	{
 		class Experimental
 		{
@@ -103,7 +103,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Double>}.
 	 */
 	@Test
-	public void injectionListTypeFromDouble()
+	public void injectWithListTypeFromDouble()
 	{
 		class Experimental
 		{
@@ -125,7 +125,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Long>}.
 	 */
 	@Test
-	public void injectionListTypeFromLong()
+	public void injectWithListTypeFromLong()
 	{
 		class Experimental
 		{
@@ -147,7 +147,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<String>}.
 	 */
 	@Test
-	public void injectionListTypeFromString()
+	public void injectWithListTypeFromString()
 	{
 		class Experimental
 		{
@@ -169,7 +169,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Character>}.
 	 */
 	@Test
-	public void injectionListTypeFromCharacter()
+	public void injectWithListTypeFromCharacter()
 	{
 		class Experimental
 		{
@@ -191,7 +191,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Boolean>}.
 	 */
 	@Test
-	public void injectionListTypeFromBoolean()
+	public void injectWithListTypeFromBoolean()
 	{
 		class Experimental
 		{
@@ -213,7 +213,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code List<Byte>}.
 	 */
 	@Test
-	public void injectionListTypeFromByte()
+	public void injectWithListTypeFromByte()
 	{
 		class Experimental
 		{
@@ -235,7 +235,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code List}.
 	 */
 	@Test
-	public void injectionListTypeNull()
+	public void injectWithListTypeNull()
 	{
 		class Experimental
 		{
@@ -260,7 +260,7 @@ public class InjectionInListTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений в {@code List}.
 	 */
 	@Test
-	public void injectionListTypeDuplicate()
+	public void injectWithListTypeDuplicate()
 	{
 		class Experimental
 		{

@@ -37,7 +37,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Integer>}.
 	 */
 	@Test
-	public void injectionSetTypeFromInteger()
+	public void injectWithSetTypeFromInteger()
 	{
 		class Experimental
 		{
@@ -59,7 +59,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Short>}.
 	 */
 	@Test
-	public void injectionSetTypeFromShort()
+	public void injectWithSetTypeFromShort()
 	{
 		class Experimental
 		{
@@ -81,7 +81,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Float>}.
 	 */
 	@Test
-	public void injectionSetTypeFromFloat()
+	public void injectWithSetTypeFromFloat()
 	{
 		class Experimental
 		{
@@ -103,7 +103,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Double>}.
 	 */
 	@Test
-	public void injectionSetTypeFromDouble()
+	public void injectWithSetTypeFromDouble()
 	{
 		class Experimental
 		{
@@ -125,7 +125,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Long>}.
 	 */
 	@Test
-	public void injectionSetTypeFromLong()
+	public void injectWithSetTypeFromLong()
 	{
 		class Experimental
 		{
@@ -147,7 +147,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<String>}.
 	 */
 	@Test
-	public void injectionSetTypeFromString()
+	public void injectWithSetTypeFromString()
 	{
 		class Experimental
 		{
@@ -169,7 +169,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Character>}.
 	 */
 	@Test
-	public void injectionSetTypeFromCharacter()
+	public void injectWithSetTypeFromCharacter()
 	{
 		class Experimental
 		{
@@ -191,7 +191,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Boolean>}.
 	 */
 	@Test
-	public void injectionSetTypeFromBoolean()
+	public void injectWithSetTypeFromBoolean()
 	{
 		class Experimental
 		{
@@ -213,7 +213,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Set<Byte>}.
 	 */
 	@Test
-	public void injectionSetTypeFromByte()
+	public void injectWithSetTypeFromByte()
 	{
 		class Experimental
 		{
@@ -235,7 +235,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Set}.
 	 */
 	@Test
-	public void injectionSetTypeNull()
+	public void injectWithSetTypeNull()
 	{
 		class Experimental
 		{
@@ -260,7 +260,7 @@ public class InjectionInSetTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в дублирующих значений в {@code Set}.
 	 */
 	@Test
-	public void injectionSetTypeDuplicate()
+	public void injectWithSetTypeDuplicate()
 	{
 		class Experimental
 		{

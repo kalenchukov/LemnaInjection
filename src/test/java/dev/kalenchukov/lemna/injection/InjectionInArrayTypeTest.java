@@ -35,7 +35,7 @@ public class InjectionInArrayTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Integer[]}.
 	 */
 	@Test
-	public void injectionArrayIntegerType()
+	public void injectWithArrayIntegerType()
 	{
 		class Experimental
 		{
@@ -44,20 +44,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("1", "11"));
+		Integer[] expected = new Integer[] {1, 11};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Integer[]{1, 11});
+		assertThat(experimental.field).containsSequence(expected);
 	}
-	
+
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Short[]}.
 	 */
 	@Test
-	public void injectionArrayShortType()
+	public void injectWithArrayShortType()
 	{
 		class Experimental
 		{
@@ -66,20 +67,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("2", "22"));
+		Short[] expected = new Short[] {2, 22};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Short[]{2, 22});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Float[]}.
 	 */
 	@Test
-	public void injectionArrayFloatType()
+	public void injectWithArrayFloatType()
 	{
 		class Experimental
 		{
@@ -88,20 +90,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("3.0", "3.30"));
+		Float[] expected = new Float[] {3.0F, 3.30F};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Float[]{3.0F, 3.30F});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Double[]}.
 	 */
 	@Test
-	public void injectionArrayDoubleType()
+	public void injectWithArrayDoubleType()
 	{
 		class Experimental
 		{
@@ -110,20 +113,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("4.59", "59.40"));
+		Double[] expected = new Double[] {4.59, 59.40};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Double[]{4.59, 59.40});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Long[]}.
 	 */
 	@Test
-	public void injectionArrayLongType()
+	public void injectWithArrayLongType()
 	{
 		class Experimental
 		{
@@ -132,20 +136,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("1698756", "345345346"));
+		Long[] expected = new Long[] {1698756L, 345345346L};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Long[]{1698756L, 345345346L});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code String[]}.
 	 */
 	@Test
-	public void injectionArrayStringType()
+	public void injectWithArrayStringType()
 	{
 		class Experimental
 		{
@@ -154,20 +159,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();;
 		value.put("field", List.of("text", "TEXT"));
+		String[] expected = new String[] {"text", "TEXT"};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new String[] {"text", "TEXT"});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Character[]}.
 	 */
 	@Test
-	public void injectionArrayCharacterType()
+	public void injectWithArrayCharacterType()
 	{
 		class Experimental
 		{
@@ -176,20 +182,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("A", "B"));
+		Character[] expected = new Character[] {'A', 'B'};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Character[]{'A', 'B'});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Boolean[]}.
 	 */
 	@Test
-	public void injectionArrayBooleanType()
+	public void injectWithArrayBooleanType()
 	{
 		class Experimental
 		{
@@ -198,20 +205,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("true", "false"));
+		Boolean[] expected = new Boolean[] {true, false};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Boolean[]{true, false});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Byte[]}.
 	 */
 	@Test
-	public void injectionArrayByteType()
+	public void injectWithArrayByteType()
 	{
 		class Experimental
 		{
@@ -220,20 +228,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("27", "45"));
+		Byte[] expected = new Byte[] {27, 45};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Byte[]{27, 45});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в {@code Array}.
 	 */
 	@Test
-	public void injectionArrayTypeNull()
+	public void injectWithArrayTypeNull()
 	{
 		class Experimental
 		{
@@ -245,20 +254,21 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", values);
+		Integer[] expected = new Integer[] {null};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Integer[]{null});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 
 	/**
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением дублирующих значений в {@code Array}.
 	 */
 	@Test
-	public void injectionArrayTypeDuplicate()
+	public void injectWithArrayTypeDuplicate()
 	{
 		class Experimental
 		{
@@ -267,12 +277,13 @@ public class InjectionInArrayTypeTest
 
 		Map<String, List<String>> value = new HashMap<>();
 		value.put("field", List.of("10", "10"));
+		Integer[] expected = new Integer[] {10, 10};
 
 		Experimental experimental = new Experimental();
 
 		Injectable injector = new Injection(experimental);
 		injector.inject(value);
 
-		assertThat(experimental.field).containsSequence(new Integer[]{10, 10});
+		assertThat(experimental.field).containsSequence(expected);
 	}
 }

@@ -35,7 +35,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Integer}.
 	 */
 	@Test
-	public void injectionIntegerType()
+	public void injectWithIntegerType()
 	{
 		class Experimental
 		{
@@ -57,7 +57,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Short}.
 	 */
 	@Test
-	public void injectionShortType()
+	public void injectWithShortType()
 	{
 		class Experimental
 		{
@@ -79,7 +79,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Float}.
 	 */
 	@Test
-	public void injectionFloatType()
+	public void injectWithFloatType()
 	{
 		class Experimental
 		{
@@ -101,7 +101,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Double}.
 	 */
 	@Test
-	public void injectionDoubleType()
+	public void injectWithDoubleType()
 	{
 		class Experimental
 		{
@@ -123,7 +123,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Long}.
 	 */
 	@Test
-	public void injectionLongType()
+	public void injectWithLongType()
 	{
 		class Experimental
 		{
@@ -145,7 +145,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code String}.
 	 */
 	@Test
-	public void injectionStringType()
+	public void injectWithStringType()
 	{
 		class Experimental
 		{
@@ -167,7 +167,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Character}.
 	 */
 	@Test
-	public void injectionCharacterType()
+	public void injectWithCharacterType()
 	{
 		class Experimental
 		{
@@ -189,7 +189,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Boolean}.
 	 */
 	@Test
-	public void injectionBooleanType()
+	public void injectWithBooleanType()
 	{
 		class Experimental
 		{
@@ -211,7 +211,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением в {@code Byte}.
 	 */
 	@Test
-	public void injectionByteType()
+	public void injectWithByteType()
 	{
 		class Experimental
 		{
@@ -233,7 +233,7 @@ public class InjectionInSingleTypeTest
 	 * Проверка метода {@link Injection#inject(Map)} с внедрением {@code null} в одиночный тип данных.
 	 */
 	@Test
-	public void injectionNull()
+	public void injectWithNull()
 	{
 		class Experimental
 		{
